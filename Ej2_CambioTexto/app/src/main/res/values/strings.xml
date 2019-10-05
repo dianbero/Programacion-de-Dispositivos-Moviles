@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ej2 CambioTexto</string>
+    <string name="instrucciones">Elige entre las siguientes opciones</string>
+    <string name="frase">Hello World!</string>
+    <string name="negrita">Negrita</string>
+    <string name="gigante">Fuente Gigante</string>
+    <string name="minuscula">Fuente Minuscula</string>
+    <string name="colorRojo">Color Rojo</string>
+    <string name="botonAplicar">Aplicar</string>
+    <!--<string name="btnAmpliar">+</string>
+    <string name="btnDisminuir">-</string>-->
+</resources>
