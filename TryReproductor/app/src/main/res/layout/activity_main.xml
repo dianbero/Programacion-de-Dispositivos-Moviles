@@ -15,19 +15,29 @@
         android:text="Reproductor"
         android:textSize="20dp"
         android:layout_marginVertical="10dp"
-        android:layout_above="@id/image"
-        android:textColor="@color/colorFontInBackground" />
+        android:textColor="@color/colorFontInBackground"/>
     <ImageView
         android:id="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/layBotones"/>
+        android:layout_below="@id/titulo"
+        android:layout_above="@id/layBotones"
+        />
 
     <LinearLayout
         android:id="@+id/layBotones"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnPrevious" />
+
+        <!--android:layout_alignTop="@id/btnNext"-->
 
         <Button
             android:id="@+id/btnPlay"
@@ -41,30 +51,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stop"
-            android:layout_alignParentRight="true"
             android:layout_below="@id/btnPlay"/>
-
-        <!--<RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="50dp"-
-
-            android:layout_below="@id/btnStop">-->
-            <Button
-                android:id="@+id/btnNext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/btnPrevious"/>
 
         <Button
             android:id="@+id/btnPrevious"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/btnNext"
             android:layout_alignParentRight="true"
             android:text="@string/btnNext" />
-            <!--android:layout_marginLeft="100dp"-->
-        </LinearLayout>
-    <!--</RelativeLayout>-->
+        <!--<RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_below="@id/btnStop">-->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnListaCanciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnListaCanciones"
+        android:layout_below="@id/layBotones"
+        android:layout_centerInParent="true"/>
+
 
 </RelativeLayout>
