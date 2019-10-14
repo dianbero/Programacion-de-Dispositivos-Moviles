@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0; i<canciones.length;i++){
             canciones[i] = "Canción " + Integer.toString(i);
         }
-        
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, canciones);
 
         listaCanciones.setAdapter(adapter);
