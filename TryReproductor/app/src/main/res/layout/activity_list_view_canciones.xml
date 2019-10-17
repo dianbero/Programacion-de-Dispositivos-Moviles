@@ -1,11 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:id="@+id/listViewCanciones">
 
+    <ImageView
+        android:id="@+id/iconoImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icono_imagen"
+        android:contentDescription="descripción icono imagen"/>
+    <TextView
+        android:id="@+id/txtTítulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iconoImagen"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/txtArtista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTítulo"/>
 
-</ListView>
+    <!--<ImageView
+        android:id="@+id/iconPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txtImagen"/>
+    <ImageView
+        android:id="@+id/iconStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/iconPlay"
+        android:layout_alignParentRight="true"/>-->
+
+</RelativeLayout>
