@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-
 import java.util.ArrayList;
 
 import es.iesnervion.diana.tryreproductor.Clases.Canciones;
@@ -20,12 +19,12 @@ public class AdapterCanciones extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return arrayListCanciones.size();
+        return arrayListCanciones.size();//Devuelve todas la canciones del arrayList
     }
 
     @Override
-    public Object getItem(int i) {
-        return null;
+    public Object getItem(int posicion) {//Devuelve la lista de elementos del arrayList en la posicion especificada
+        return arrayListCanciones.get(posicion);
     }
 
     @Override
