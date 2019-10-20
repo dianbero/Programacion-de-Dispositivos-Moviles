@@ -40,10 +40,13 @@ public class AdapterCanciones extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup)// muestra los elementos dentro del ListView
     {
+        View vista = view;
         //Crea inflater para cada layout de cada fila de lista (cada ListView)
         if(view == null){
+            LayoutInflater inflater = LayoutInflater.from(actividad);
             //resource: Se le pasa id del layout a cargar(inflar), root: view a la que se acopla el recuso como hijo si el attachRoot es True, attachToRoot: ser o no ser padre del recurso infladdo
-            view = LayoutInflater.from(actividad).inflate(R.layout.activity_list_view_canciones, viewGroup, false);
+            //view = LayoutInflater.from(actividad).inflate(R.layout.activity_list_view_canciones, viewGroup, false);
+            view = inflater.inflate(R.layout.activity_list_view_canciones, viewGroup, false);
         }
         return view;
     }
