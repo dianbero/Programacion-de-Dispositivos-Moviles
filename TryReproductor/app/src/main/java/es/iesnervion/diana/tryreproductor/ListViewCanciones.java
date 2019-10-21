@@ -15,7 +15,7 @@ public class ListViewCanciones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_canciones);
 
-        listaCanciones = findViewById(R.id.listViewCanciones);
+        //listaCanciones = findViewById(R.id.listViewCanciones);
 
         String[] canciones = {"Canción 1","Canción 2","Canción 3"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, canciones);

@@ -16,7 +16,7 @@
         android:src="@drawable/icono_imagen"
         android:contentDescription="descripción icono imagen"/>
     <TextView
-        android:id="@+id/txtTítulo"
+        android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/iconoImagen"
@@ -26,7 +26,7 @@
         android:id="@+id/txtArtista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtTítulo"/>
+        android:layout_below="@id/txtTitulo"/>
 
     <!--<ImageView
         android:id="@+id/iconPlay"
