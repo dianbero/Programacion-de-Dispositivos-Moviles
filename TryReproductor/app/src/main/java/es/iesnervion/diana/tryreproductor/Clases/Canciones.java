@@ -10,7 +10,7 @@ public class Canciones {
 
     private String titulo;
     private String artista;
-    private Drawable imagenCancion;
+    //private Drawable imagenCancion;
 
     public Canciones(){
         this.titulo = "Default title";
@@ -18,10 +18,10 @@ public class Canciones {
         //this.imagenCancion = Drawable.get //getDrawable(R.drawable.icono_imagen);
     }
 
-    public Canciones(String titulo, String artista, Drawable archivoCancion){
+    public Canciones(String titulo, String artista/*, Drawable archivoCancion*/){
         this.titulo = titulo;
         this.artista = artista;
-        this.imagenCancion = archivoCancion;
+        //this.imagenCancion = archivoCancion;
     }
 
     //Getters and Setters
@@ -41,10 +41,10 @@ public class Canciones {
         this.artista = artista;
     }
 
-    public Drawable getImagenCancion(){
+    /*public Drawable getImagenCancion(){
         return imagenCancion;
     }
     public void setImagenCancion(Drawable imagenCancion){
         this.imagenCancion = imagenCancion;
-    }
+    }*/
 }

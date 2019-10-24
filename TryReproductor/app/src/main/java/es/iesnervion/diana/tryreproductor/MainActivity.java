@@ -94,9 +94,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ArrayList<Canciones> canciones = new ArrayList<Canciones>();
 
-        canciones.add(new Canciones("Supertrouper", "ABBA", getDrawable(R.drawable.icono_imagen)));
+        canciones.add(new Canciones("Supertrouper", "ABBA"));
+        canciones.add(new Canciones("Bad Gay", "Billie Eillish"));
+        canciones.add(new Canciones("In Common", "Alicia Keys"));
+
+        /*canciones.add(new Canciones("Supertrouper", "ABBA", getDrawable(R.drawable.icono_imagen)));
         canciones.add(new Canciones("Bad Gay", "Billie Eillish", getDrawable(R.drawable.icono_imagen)));
-        canciones.add(new Canciones("In Common", "Alicia Keys", getDrawable(R.drawable.icono_imagen)));
+        canciones.add(new Canciones("In Common", "Alicia Keys", getDrawable(R.drawable.icono_imagen)));*/
 
         return canciones;
     }
