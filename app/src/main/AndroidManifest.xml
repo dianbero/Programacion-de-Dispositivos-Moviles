@@ -17,9 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <uses-permission android:name="android.permission.CAMERA"
-            tools:ignore="WrongManifestParent" /><!--Para accdeder a la cámra del móvil-->
 
+        <!--<uses-permission android:name="android.permission.CAMERA"
+            tools:ignore="WrongManifestParent" />--><!--Para accdeder a la cámra del móvil-->
     </application>
 
 </manifest>
