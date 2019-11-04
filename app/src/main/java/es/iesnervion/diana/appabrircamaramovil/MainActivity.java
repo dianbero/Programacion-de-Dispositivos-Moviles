@@ -48,9 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //image = findViewById(R.id.imagenCamara);
 
         btnCamara = findViewById(R.id.btnCamara);
-        btnCamara.setOnClickListener(this);
+        btnCamara.setOnClickListener(this); //Botón para acceder a la cámara
         //setContentView(btnCamara);
-
 
     }
 
@@ -60,10 +59,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         //Intent intentOpenCamera = new Intent("android.media.action.IMAGE_CAPTURE"); //si falla probar, sin comillas: android.provider.MediaStore.ACTION_IMAGE_CAPTURE
-        //intentOpenCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        //startActivityForResult(intentOpenCamera, CAMERA_PICTURE_ID);
+        intentOpenCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(intentOpenCamera, CAMERA_PICTURE_ID);
 
-        hacerFotoIntent();
+        //hacerFotoIntent();
 
     }
 
@@ -73,9 +72,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void hacerFotoIntent(){
         //intentOpenCamera = new Intent("android.media.action.IMAGE_CAPTURE"); //si falla probar, sin comillas: android.provider.MediaStore.ACTION_IMAGE_CAPTURE
         intentOpenCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        //startActivityForResult(intentOpenCamera, CAMERA_PICTURE_ID);
+        startActivityForResult(intentOpenCamera, CAMERA_PICTURE_ID);
+        //onActivityResult(CAMERA_PICTURE_ID, RESULT_OK, intentOpenCamera);
 
-        File archivoFoto = null;
+
+        /*File archivoFoto = null;
         try{
             archivoFoto = crearArchivoImagen();
         }catch (IOException e){
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Uri imagenUri = FileProvider.getUriForFile(this, "com.example.android.fileprovider", archivoFoto);
             intentOpenCamera.putExtra(MediaStore.EXTRA_OUTPUT, imagenUri);
             startActivityForResult(intentOpenCamera, CAMERA_PICTURE_ID);
-        }
+        }*/
     }
 
     /**
@@ -102,12 +103,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Vuelve a la página de foto
         btnVolver.setOnClickListener(this);
 
-        if (requestCode == CAMERA_PICTURE_ID && resultCode == RESULT_OK) {
-            //Convierte la imagen a un formato BitMap para almacenar
-            Bitmap imagen = (Bitmap) data.getExtras().get("data");
-            //Manda la imagen obtenida en la vista image2
-            image2.setImageBitmap(imagen);
-            guardarImagenEnGaleria();
+        if (requestCode == CAMERA_PICTURE_ID && resultCode == RESULT_OK && resultCode >-1) {
+
+            Bitmap imagen = (Bitmap) data.getExtras().get("data"); //Convierte la imagen a un formato BitMap para almacenar
+            image2.setImageBitmap(imagen); //Manda la imagen obtenida en la vista image2 para mostrarla
+            //guardarImagenEnGaleria();
 
         }
     }
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @return
      * @throws IOException
      */
-    private File crearArchivoImagen() throws IOException {
+    /*private File crearArchivoImagen() throws IOException {
         //Crear archivo de imagen
         //String de fecha de creación
         //String picTime = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imagenPath = imagenAGuardar.getAbsolutePath();
 
         return imagenAGuardar;
-    }
+    }*/
 
 }
 
