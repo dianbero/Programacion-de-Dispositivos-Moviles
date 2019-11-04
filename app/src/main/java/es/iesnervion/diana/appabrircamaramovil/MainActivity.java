@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * GeeksForGeeks:
      * https://www.geeksforgeeks.org/android-how-to-open-camera-through-intent-and-display-captured-image/
      stackOverFlow:
-     https://stackoverflow.com/questions/41777836/using-camera-to-take-photo-and-save-to-gallery*/
+     https://stackoverflow.com/questions/41777836/using-camera-to-take-photo-and-save-to-gallery
+     * The definitive guide:
+     * https://androidstudiofaqs.com/tutoriales/guardar-una-imagen-android-studio*/
      
 
 
