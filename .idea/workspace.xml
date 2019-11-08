@@ -341,9 +341,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1366" height="770" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7935484" visible="true" weight="0.17045455" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79407173" visible="true" weight="0.17045455" />
       <window_info id="Structure" order="1" sideWeight="0.20610687" side_tool="true" weight="0.17045455" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -351,7 +350,7 @@
       <window_info id="Designer" order="5" />
       <window_info id="Resources Explorer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info id="Captures" order="8" sideWeight="0.20645161" side_tool="true" visible="true" weight="0.17045455" />
+      <window_info id="Captures" order="8" sideWeight="0.20592824" side_tool="true" visible="true" weight="0.17045455" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.3281493" />
       <window_info anchor="bottom" id="TODO" order="2" />
@@ -359,7 +358,7 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="5" weight="0.1825273" />
       <window_info anchor="bottom" id="Android Profiler" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.27457097" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.27457097" />
       <window_info anchor="bottom" id="Debug" order="8" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
