@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //btnVolver.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
 
-        Intent i = new Intent(MainActivity.this, ImagenActivity.class);
-        startActivity(i);
+        /*Intent i = new Intent(MainActivity.this, ImagenActivity.class);
+        startActivity(i);*/
 
         if(requestCode == CAMERA_PICTURE_ID && resultCode == RESULT_OK){
             Bundle extras = data.getExtras();
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-   /* private File createImageFile() throws IOException{
+    private File createImageFile() throws IOException{
         //Creación nombre imagen
         String tiempoFoto = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String nombreArchivoImagen = "JPEG_" + tiempoFoto + "_";
@@ -99,12 +99,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void meterFotoEnGaleria(){
         //Intent intentMedia = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
         Intent intentMedia = new Intent(Intent.ACTION_SEND);
+        //File file = new File(pathFotoActual);
         File file = new File(pathFotoActual);
         Uri fotoURI = Uri.fromFile(file);
         intentMedia.setData(fotoURI);
         this.sendBroadcast(intentMedia);
     }
-*/
+
+
+
+
+   //Implementación de método onclick establecido previamente en activity_main.xml
+    //OnClick:
+    /*public void irAImagenActivity(){
+
+    }*/
 }
 
 

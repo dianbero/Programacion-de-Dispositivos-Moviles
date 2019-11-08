@@ -24,7 +24,7 @@ public class ImagenActivity extends AppCompatActivity implements View.OnClickLis
         btnVolver.setOnClickListener(this);
 
     }
-/*
+
     @Override
     public void onClick(View v) {
         volverPaginaPrincipalIntent();
@@ -32,5 +32,5 @@ public class ImagenActivity extends AppCompatActivity implements View.OnClickLis
     private void volverPaginaPrincipalIntent(){
         Intent intentVolver = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intentVolver);
-    }*/
+    }
 }
