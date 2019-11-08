@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='AppAbrirCamaraMovil'
+rootProject.name='Camara'

@@ -22,131 +22,89 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    //ImageView image;
-    ImageView image2;
+    ImageView imagenCamara;
     Button btnCamara, btnVolver;
+    String pathFotoActual;
     private static final int CAMERA_PICTURE_ID = 1;
-    String imagenPath;
-
-    /*
-     * Info para App Cámara:
-     * https://stackoverflow.com/questions/5991319/capture-image-from-camera-and-display-in-activity
-     * De Página Android:
-     * https://developer.android.com/training/camera/photobasics
-     * GeeksForGeeks:
-     * https://www.geeksforgeeks.org/android-how-to-open-camera-through-intent-and-display-captured-image/
-     stackOverFlow:
-     https://stackoverflow.com/questions/41777836/using-camera-to-take-photo-and-save-to-gallery
-     * The definitive guide:
-     * https://androidstudiofaqs.com/tutoriales/guardar-una-imagen-android-studio*/
-     
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //image = findViewById(R.id.imagenCamara);
-
         btnCamara = findViewById(R.id.btnCamara);
-        btnCamara.setOnClickListener(this); //Botón para acceder a la cámara
-        //setContentView(btnCamara);
-
+        btnCamara.setOnClickListener(this);
     }
-
-
-    Intent intentOpenCamera;
 
     @Override
-    public void onClick(View view) {
-        //Intent intentOpenCamera = new Intent("android.media.action.IMAGE_CAPTURE"); //si falla probar, sin comillas: android.provider.MediaStore.ACTION_IMAGE_CAPTURE
-        intentOpenCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intentOpenCamera, CAMERA_PICTURE_ID);
-
-        //hacerFotoIntent();
-
+    public void onClick(View v) {
+        hacerFotoIntent();
     }
 
-    /**
-     * Método para crear el intent para abrir cámara, tomar foto y crear archivo de imagen para guardarla
-     */
-    private void hacerFotoIntent(){
-        //intentOpenCamera = new Intent("android.media.action.IMAGE_CAPTURE"); //si falla probar, sin comillas: android.provider.MediaStore.ACTION_IMAGE_CAPTURE
-        intentOpenCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intentOpenCamera, CAMERA_PICTURE_ID);
-        //onActivityResult(CAMERA_PICTURE_ID, RESULT_OK, intentOpenCamera);
+    public void hacerFotoIntent(){
+        Intent hacerFotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if(hacerFotoIntent.resolveActivity(getPackageManager()) != null){ //verificación: Comprueba que una actividad para la cámara que se encargue del intent //si llamas a startActivityForResult() con un intent que ninguna app puede manejar, la app fallará
+            //Creación de acrhivo para la foto
+            /*File archivoFoto = null;
+            try{
+                archivoFoto = createImageFile();
+            }catch (IOException ex){
+                Toast.makeText(getApplicationContext(), ex.getMessage(), Toast.LENGTH_SHORT).show(); //Error occurred while creating the File
+            }
+            //Si el archivo se creó correctamente:
+            if(archivoFoto != null){
+                Uri fotoURI = FileProvider.getUriForFile(this,"com.example.android.fileprovider",  archivoFoto);
 
 
-        /*File archivoFoto = null;
-        try{
-            archivoFoto = crearArchivoImagen();
-        }catch (IOException e){
-            System.out.println(e.getMessage());
+                hacerFotoIntent.putExtra(MediaStore.EXTRA_OUTPUT, fotoURI);
+                startActivityForResult(hacerFotoIntent, CAMERA_PICTURE_ID); //si sí creo fichero
+            }*/
+
+            startActivityForResult(hacerFotoIntent, CAMERA_PICTURE_ID); //si no creo fichero
+
+            //Intent vistaFoto = new Intent(this, ImagenActivity.class);
+            //startActivity(vistaFoto);
         }
-        if(archivoFoto != null){
-            Uri imagenUri = FileProvider.getUriForFile(this, "com.example.android.fileprovider", archivoFoto);
-            intentOpenCamera.putExtra(MediaStore.EXTRA_OUTPUT, imagenUri);
-            startActivityForResult(intentOpenCamera, CAMERA_PICTURE_ID);
-        }*/
     }
 
-    /**
-     * Método para ralizar foto y mostrarla en una imagen establecida
-     *
-     * @param requestCode
-     * @param resultCode
-     * @param data
-     */
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
         setContentView(R.layout.layout_imagen_camara);
-        image2 = findViewById(R.id.imagenCamara2);
+        imagenCamara = findViewById(R.id.imagenCamara);
         btnVolver = findViewById(R.id.btnVolver);
         //Vuelve a la página de foto
+        //btnVolver.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
 
-        if (requestCode == CAMERA_PICTURE_ID && resultCode == RESULT_OK && resultCode >-1) {
+        Intent i = new Intent(MainActivity.this, ImagenActivity.class);
+        startActivity(i);
 
-            Bitmap imagen = (Bitmap) data.getExtras().get("data"); //Convierte la imagen a un formato BitMap para almacenar
-            image2.setImageBitmap(imagen); //Manda la imagen obtenida en la vista image2 para mostrarla
-            //guardarImagenEnGaleria();
-
+        if(requestCode == CAMERA_PICTURE_ID && resultCode == RESULT_OK){
+            Bundle extras = data.getExtras();
+            Bitmap imagenBitmap = (Bitmap) extras.get("data");
+            imagenCamara.setImageBitmap(imagenBitmap);
         }
     }
 
-    //Guardar la imagen obtenida en gallería
-    private void guardarImagenEnGaleria(){
-        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-        File nuevoArchivoImagen = new File(imagenPath);
-        Uri contenidoUri = Uri.fromFile(nuevoArchivoImagen);
-        mediaScanIntent.setData(contenidoUri);
-        this.sendBroadcast(mediaScanIntent);
+   /* private File createImageFile() throws IOException{
+        //Creación nombre imagen
+        String tiempoFoto = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String nombreArchivoImagen = "JPEG_" + tiempoFoto + "_";
+        File directorioGuardado = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File archivoImagen = File.createTempFile(nombreArchivoImagen, ".jpg", directorioGuardado);
+
+        pathFotoActual = archivoImagen.getAbsolutePath();
+        return archivoImagen;
     }
 
-
-    /**
-     * Método para acceder al directorio para guardar imagen y crear los archivos de la imagen para guardarla en ese directorio
-     * @return
-     * @throws IOException
-     */
-    /*private File crearArchivoImagen() throws IOException {
-        //Crear archivo de imagen
-        //String de fecha de creación
-        //String picTime = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        //String para el nombre del archivo de la foto con fecha
-        //String nombreArchivoImagen = "JPEG_" + picTime + "_";
-        //Dirección para guardar la imagen
-        //File directorioGuardado = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-
-        File directorioguardado = Environment.getExternalStorageDirectory();
-        //Creación de directorio vacío en el directorio especificado
-        File imagenAGuardar = File.createTempFile(nombreArchivoImagen, ".jpg", directorioGuardado);
-        //Guardar archivo
-        imagenPath = imagenAGuardar.getAbsolutePath();
-
-        return imagenAGuardar;
-    }*/
-
+    private void meterFotoEnGaleria(){
+        //Intent intentMedia = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        Intent intentMedia = new Intent(Intent.ACTION_SEND);
+        File file = new File(pathFotoActual);
+        Uri fotoURI = Uri.fromFile(file);
+        intentMedia.setData(fotoURI);
+        this.sendBroadcast(intentMedia);
+    }
+*/
 }
 
 

@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Save {
-
+/*
     private Context contextSave;
     private String nameOfFolder = "/Gallery";
     private String nameOfFile = "imageCreated";
@@ -58,5 +58,5 @@ public class Save {
     private void messageAbleToSave(){
         Toast.makeText(contextSave, )
     }
-
+*/
 }
