@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String pathFotoActual;
     private static final int CAMERA_PICTURE_ID = 1;
 
+    /*Try this:
+    * https://stackoverflow.com/questions/8560501/android-save-image-into-gallery/12678282 */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
