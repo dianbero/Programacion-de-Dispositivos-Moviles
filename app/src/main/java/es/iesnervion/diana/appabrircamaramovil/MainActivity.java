@@ -5,8 +5,6 @@ import androidx.core.content.FileProvider;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Camera;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -14,6 +12,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,26 +46,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void hacerFotoIntent(){
         Intent hacerFotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if(hacerFotoIntent.resolveActivity(getPackageManager()) != null){ //verificación: Comprueba que una actividad para la cámara que se encargue del intent //si llamas a startActivityForResult() con un intent que ninguna app puede manejar, la app fallará
-            //Creación de acrhivo para la foto
-            /*File archivoFoto = null;
+            //Creación de archivo para la foto
+            File archivoFoto = null;
             try{
-                archivoFoto = createImageFile();
+                archivoFoto = crearArchivoImagen();
             }catch (IOException ex){
-                Toast.makeText(getApplicationContext(), ex.getMessage(), Toast.LENGTH_SHORT).show(); //Error occurred while creating the File
+                Toast.makeText(getApplicationContext(), ex.getMessage(), Toast.LENGTH_SHORT).show(); //Error al crear el archivo
+                //ex.getStackTrace();
             }
             //Si el archivo se creó correctamente:
             if(archivoFoto != null){
                 Uri fotoURI = FileProvider.getUriForFile(this,"com.example.android.fileprovider",  archivoFoto);
 
+                //Uri fotoURI = FileProvider.getUriForFile(this,"com.mydomain.fileprovider",  archivoFoto);
 
                 hacerFotoIntent.putExtra(MediaStore.EXTRA_OUTPUT, fotoURI);
                 startActivityForResult(hacerFotoIntent, CAMERA_PICTURE_ID); //si sí creo fichero
-            }*/
 
-            startActivityForResult(hacerFotoIntent, CAMERA_PICTURE_ID); //si no creo fichero
+                meterFotoEnGaleria();
+            }
 
-            //Intent vistaFoto = new Intent(this, ImagenActivity.class);
-            //startActivity(vistaFoto);
+           // startActivityForResult(hacerFotoIntent, CAMERA_PICTURE_ID); //si no creo fichero
         }
     }
 
@@ -74,13 +74,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.layout_imagen_camara);
         imagenCamara = findViewById(R.id.imagenCamara);
         btnVolver = findViewById(R.id.btnVolver);
+
+        //intent para volver a la página principal
+        //intentVolverAPrincipal();
+
         //Vuelve a la página de foto
-        //btnVolver.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
 
-        /*Intent i = new Intent(MainActivity.this, ImagenActivity.class);
-        startActivity(i);*/
-
+        //Obtención imagen
         if(requestCode == CAMERA_PICTURE_ID && resultCode == RESULT_OK){
             Bundle extras = data.getExtras();
             Bitmap imagenBitmap = (Bitmap) extras.get("data");
@@ -88,35 +89,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private File createImageFile() throws IOException{
+    private File crearArchivoImagen() throws IOException{
         //Creación nombre imagen
-        String tiempoFoto = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String nombreArchivoImagen = "JPEG_" + tiempoFoto + "_";
-        File directorioGuardado = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File archivoImagen = File.createTempFile(nombreArchivoImagen, ".jpg", directorioGuardado);
+        String tiempoFoto = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()); //Texto fecha foto
+        String nombreArchivoImagen = "JPEG_" + tiempoFoto + "_"; //Texto archivo foto
+        File directorioGuardado = getExternalFilesDir(Environment.DIRECTORY_PICTURES);  //Directorio donde se guarda
+        File archivoImagen = File.createTempFile(nombreArchivoImagen, ".jpg", directorioGuardado);  //Archivo final imagen
 
-        pathFotoActual = archivoImagen.getAbsolutePath();
+        pathFotoActual = archivoImagen.getAbsolutePath(); //Guarda archivo: path para usar con Action_VIEW intents
         return archivoImagen;
     }
 
     private void meterFotoEnGaleria(){
-        //Intent intentMedia = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-        Intent intentMedia = new Intent(Intent.ACTION_SEND);
-        //File file = new File(pathFotoActual);
+        Intent intentMedia = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
         File file = new File(pathFotoActual);
         Uri fotoURI = Uri.fromFile(file);
         intentMedia.setData(fotoURI);
         this.sendBroadcast(intentMedia);
     }
 
-
-
-
-   //Implementación de método onclick establecido previamente en activity_main.xml
-    //OnClick:
-    /*public void irAImagenActivity(){
-
-    }*/
+    /*
+    public void intentVolverAPrincipal(){
+        Intent intentVolver = new Intent(MainActivity.this, ImagenActivity.class);
+        startActivity(intentVolver);
+    }
+    */
 }
 
 

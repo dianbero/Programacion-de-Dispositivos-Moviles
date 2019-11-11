@@ -22,7 +22,6 @@ public class ImagenActivity extends AppCompatActivity implements View.OnClickLis
         imagenCamara = findViewById(R.id.imagenCamara);
         btnVolver = findViewById(R.id.btnVolver);
         btnVolver.setOnClickListener(this);
-
     }
 
     @Override
@@ -30,7 +29,7 @@ public class ImagenActivity extends AppCompatActivity implements View.OnClickLis
         volverPaginaPrincipalIntent();
     }
     private void volverPaginaPrincipalIntent(){
-        Intent intentVolver = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intentVolver = new Intent(ImagenActivity.this, MainActivity.class);
         startActivity(intentVolver);
     }
 }
