@@ -30,11 +30,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iesnervion/diana/appabrircamaramovil/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="106" column="37" lean-forward="true" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
+            <state relative-caret-position="240">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1472#1473#0" expanded="true" />
+                <element signature="e#1505#1506#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,30 +49,26 @@
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider editor-type-id="android-manifest" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
-              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-              <folding>
-                <element signature="e#332#350#0" expanded="true" />
-              </folding>
+              <caret line="25" column="47" lean-forward="true" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml">
-          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="98" lean-forward="true" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
+              <caret line="5" column="98" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -76,8 +77,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="205">
+              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -85,20 +86,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iesnervion/diana/appabrircamaramovil/Save.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
+            <state relative-caret-position="469">
               <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -133,14 +125,14 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_imagen_camra.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_imagen_camara.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/es/iesnervion/diana/appabrircamaramovil/Save.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/paths.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/es/iesnervion/diana/appabrircamaramovil/ImagenActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/es/iesnervion/diana/appabrircamaramovil/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/es/iesnervion/diana/appabrircamaramovil/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -155,10 +147,52 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AppAbrirCamaraMovil" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="AppAbrirCamaraMovil" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+            </path>
+            <path>
+              <item name="AppAbrirCamaraMovil" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="AppAbrirCamaraMovil" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="appabrircamaramovil" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AppAbrirCamaraMovil" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java (generated)" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="AppAbrirCamaraMovil" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="AppAbrirCamaraMovil" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,21 +356,21 @@
     <frame x="1366" y="-2" width="1366" height="770" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7888631" weight="0.17045455" />
-      <window_info id="Structure" order="1" sideWeight="0.20610687" side_tool="true" weight="0.17045455" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7900763" visible="true" weight="0.17045455" />
+      <window_info id="Structure" order="1" sideWeight="0.20992367" side_tool="true" weight="0.17045455" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="Resources Explorer" order="5" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Build Variants" order="7" sideWeight="0.21113689" side_tool="true" weight="0.17045455" />
+      <window_info id="Build Variants" order="7" sideWeight="0.20992367" side_tool="true" weight="0.17045455" />
       <window_info id="Captures" order="8" sideWeight="0.20992367" side_tool="true" weight="0.17045455" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32761312" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="5" weight="0.1825273" />
+      <window_info anchor="bottom" id="Build" order="5" visible="true" weight="0.1825273" />
       <window_info anchor="bottom" id="Android Profiler" order="6" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.27457097" />
       <window_info anchor="bottom" id="Debug" order="8" />
@@ -349,21 +383,21 @@
       <window_info anchor="right" id="Assistant" order="6" weight="0.33489934" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7888631" visible="true" weight="0.17045455" />
-      <window_info id="Structure" order="1" sideWeight="0.20610687" side_tool="true" weight="0.17045455" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7900763" visible="true" weight="0.17045455" />
+      <window_info id="Structure" order="1" sideWeight="0.20992367" side_tool="true" weight="0.17045455" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="Resources Explorer" order="5" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Build Variants" order="7" sideWeight="0.21113689" side_tool="true" visible="true" weight="0.17045455" />
+      <window_info active="true" id="Build Variants" order="7" sideWeight="0.20992367" side_tool="true" visible="true" weight="0.17045455" />
       <window_info id="Captures" order="8" sideWeight="0.20992367" side_tool="true" weight="0.17045455" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Logcat" order="1" visible="true" weight="0.32761312" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.32761312" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="5" weight="0.1825273" />
+      <window_info anchor="bottom" id="Build" order="5" visible="true" weight="0.1825273" />
       <window_info anchor="bottom" id="Android Profiler" order="6" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.27457097" />
       <window_info anchor="bottom" id="Debug" order="8" />
@@ -415,9 +449,6 @@
     <entry file="file://$PROJECT_DIR$/image-1271454_960_720.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -432,6 +463,10 @@
     <entry file="file://$PROJECT_DIR$/AppAbrirCamaraMovil.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/paths.xml" />
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -439,28 +474,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/paths.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iesnervion/diana/appabrircamaramovil/ImagenActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="e#843#844#0" expanded="true" />
-            <element signature="e#888#889#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="345">
+          <caret line="31" column="41" lean-forward="true" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iesnervion/diana/appabrircamaramovil/Save.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
+        <state relative-caret-position="469">
           <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -468,34 +491,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iesnervion/diana/appabrircamaramovil/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="106" column="37" lean-forward="true" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_imagen_camara.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="98" lean-forward="true" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -503,9 +503,34 @@
       <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <caret line="25" column="47" lean-forward="true" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="98" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iesnervion/diana/appabrircamaramovil/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
-            <element signature="e#332#350#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <provider
+        <!--<provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="es.iesnervion.android.fileprovider"
             android:exported="false"
@@ -28,10 +28,10 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"></meta-data>
         </provider>
-
-
-        <!--<uses-permission android:name="android.permission.CAMERA"
-            tools:ignore="WrongManifestParent" />--><!--Para accdeder a la cámra del móvil-->
+        -->
     </application>
+    <uses-permission android:name="android.permission.CAMERA"/>   <!--Para accededer a la cámra del móvil-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
