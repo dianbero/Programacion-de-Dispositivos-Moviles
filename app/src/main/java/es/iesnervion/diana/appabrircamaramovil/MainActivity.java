@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnCamara, btnVolver;
     String pathFotoActual;
     private static final int CAMERA_PICTURE_ID = 1;
-    private static final int CAMERA_PERMISSION_CODE = 100;
+    //private static final int CAMERA_PERMISSION_CODE = 100;
 
     /*Try this:
     * https://stackoverflow.com/questions/8560501/android-save-image-into-gallery/12678282 */
@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btnCamara = findViewById(R.id.btnCamara);
-        comprobarPermisosCamara(Manifest.permission.CAMERA, CAMERA_PERMISSION_CODE);
         btnCamara.setOnClickListener(this);
     }
 
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent hacerFotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if(hacerFotoIntent.resolveActivity(getPackageManager()) != null){ //verificación: Comprueba que una actividad para la cámara que se encargue del intent //si llamas a startActivityForResult() con un intent que ninguna app puede manejar, la app fallará
             //Creación de archivo para la foto
-            /*File archivoFoto = null;
+            File archivoFoto = null;
             try{
                 archivoFoto = crearArchivoImagen();
             }catch (IOException ex){
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             //Si el archivo se creó correctamente:
             if(archivoFoto != null){
-                Uri fotoURI = FileProvider.getUriForFile(this,"com.example.android.fileprovider",  archivoFoto);
+                Uri fotoURI = FileProvider.getUriForFile(this,"es.iesnervion.diana.appabrircamaramovil.fileprovider",  archivoFoto);
 
                 //Uri fotoURI = FileProvider.getUriForFile(this,"com.mydomain.fileprovider",  archivoFoto);
 
@@ -74,26 +73,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivityForResult(hacerFotoIntent, CAMERA_PICTURE_ID); //si sí creo fichero
 
                 meterFotoEnGaleria();
-            }*/
+            }
 
            startActivityForResult(hacerFotoIntent, CAMERA_PICTURE_ID); //si no creo fichero
         }
     }
 
 
-    private void comprobarPermisosCamara(String permiso, int codigoPermiso){
+    /*private void comprobarPermisosCamara(String permiso, int codigoPermiso){
         if(ContextCompat.checkSelfPermission(MainActivity.this, permiso) == PackageManager.PERMISSION_DENIED){
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{permiso}, codigoPermiso);
 
         }else{
             Toast.makeText(MainActivity.this, "Permiso ya concedido", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 
-    @Override
+    /*@Override
     public void onRequestedPermissionsresult(int codigoPermiso, @NonNull String[] permisos, @NonNull int[] resultados){super.onRequestedPermissionsresult(codigoPermiso, permisos)}{
 
-    }
+    }*/
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         setContentView(R.layout.layout_imagen_camara);
@@ -103,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //intent para volver a la página principal
         //intentVolverAPrincipal();
 
-        //Vuelve a la página de foto
+        //Vuelve a la página de camara
         btnVolver.setOnClickListener(this);
 
         //Obtención imagen
@@ -114,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-/*
+
     private File crearArchivoImagen() throws IOException{
         //Creación nombre imagen
         String tiempoFoto = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()); //Texto fecha foto
@@ -132,8 +131,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Uri fotoURI = Uri.fromFile(file);
         intentMedia.setData(fotoURI);
         this.sendBroadcast(intentMedia);
+
+        Toast.makeText(MainActivity.this, "Foto metida en galería", Toast.LENGTH_LONG).show();
     }
-*/
+
     /*
     public void intentVolverAPrincipal(){
         Intent intentVolver = new Intent(MainActivity.this, ImagenActivity.class);
