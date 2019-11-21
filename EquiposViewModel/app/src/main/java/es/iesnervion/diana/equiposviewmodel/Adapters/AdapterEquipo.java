@@ -26,7 +26,7 @@ public class AdapterEquipo extends ArrayAdapter<Equipo> {
 
         //Comprueba si una vista existente está siendo usada, si no, infla la vista
         if (convertView==null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.equipo_layout, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.lista_layout, parent, false);
         }
 
         //Coloca los subelementos de cada elementos de la lista
