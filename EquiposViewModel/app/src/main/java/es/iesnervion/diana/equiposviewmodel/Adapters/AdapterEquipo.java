@@ -21,11 +21,11 @@ public class AdapterEquipo extends ArrayAdapter<Equipo> {
 
     public View getView(int posicion, View convertView, ViewGroup parent){
 
-        //Coge ele elemento por su posición
+        //Coge el elemento por su posición
         Equipo equipo = getItem(posicion);
 
         //Comprueba si una vista existente está siendo usada, si no, infla la vista
-        if (convertView==null) {
+        if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.lista_layout, parent, false);
         }
 
