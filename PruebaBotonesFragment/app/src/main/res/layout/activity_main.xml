@@ -19,13 +19,16 @@
         android:id="@+id/btnFirstFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="First Fragment"/>
+        android:text="First Fragment"
+        android:layout_alignParentBottom="true"/>
 
     <Button
         android:id="@+id/btnSecondFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Second Fragment"/>
+        android:text="Second Fragment"
+        android:layout_toRightOf="@id/btnFirstFragment"
+        android:layout_alignParentBottom="true"/>
 
     <fragment
         android:id="@+id/fragmento1"
@@ -33,6 +36,7 @@
         android:layout_height="match_parent"
         android:name="es.iesnervion.diana.pruebabotonesfragment.FirstFragment"
         tools:layout="@layout/first_fragment"/>
+
     <fragment
         android:id="@+id/fragmento2"
         android:layout_width="match_parent"

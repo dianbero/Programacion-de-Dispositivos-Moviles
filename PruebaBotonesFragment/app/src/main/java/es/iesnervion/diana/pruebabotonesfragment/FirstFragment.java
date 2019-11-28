@@ -20,6 +20,17 @@ public class FirstFragment extends Fragment {
 
     }
 
+    public static FirstFragment newInstance(int num){
+
+        FirstFragment fragmento1 = new FirstFragment();
+
+        Bundle argumento = new Bundle();
+        argumento.putInt("numero", num);
+        fragmento1.setArguments(argumento);
+
+        return fragmento1;
+    }
+
 
 
 
