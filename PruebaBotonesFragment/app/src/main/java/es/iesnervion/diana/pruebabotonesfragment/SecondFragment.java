@@ -7,20 +7,15 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class FirstFragment extends Fragment {
+public class SecondFragment extends Fragment {
 
     //Constructor vacío
-    public FirstFragment(){
+    public SecondFragment(){
 
     }
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         //Infla el layout para el fragmento
-        return inflater.inflate(R.layout.first_fragment, container, false);
-
+        return inflater.inflate(R.layout.second_fragment, container, false);
+        //TODO: revisar que la vista es activity_main, creo que no, que tiene que ser la vista de un fragmento
     }
-
-
-
-
 }
