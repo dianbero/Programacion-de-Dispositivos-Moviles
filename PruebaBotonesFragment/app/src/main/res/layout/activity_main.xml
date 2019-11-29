@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Second Fragment"
-        android:layout_toRightOf="@id/btnFirstFragment"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"/>
 
     <fragment
