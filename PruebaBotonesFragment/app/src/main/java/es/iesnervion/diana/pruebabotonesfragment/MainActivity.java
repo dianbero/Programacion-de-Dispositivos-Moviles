@@ -26,6 +26,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         * Instanciating a Fragment:
         * https://stackoverflow.com/questions/10450348/do-fragments-really-need-an-empty-constructor
         *
+        * Some to have a look:
+        * https://teamtreehouse.com/community/starting-a-fragment-from-an-activity
+        *
+        * Seems interesting:
+        * https://www.raywenderlich.com/1364094-android-fragments-tutorial-an-introduction-with-kotlin#toc-anchor-004 *
         * */
 
         btn1 = findViewById(R.id.btnFirstFragment);
@@ -33,12 +38,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        btn2 = findViewById(R.id.btnSecondFragment);
 //        btn2.setOnClickListener(this);
 
-
     }
 
     @Override
     public void onClick(View view) {
 //        fragment1 = new FirstFragment();
-        FirstFragment.newInstance(1);
+        //FirstFragment.newInstance(1);
     }
 }

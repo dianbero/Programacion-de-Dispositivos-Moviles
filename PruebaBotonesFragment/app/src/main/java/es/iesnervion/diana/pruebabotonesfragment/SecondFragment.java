@@ -13,6 +13,7 @@ public class SecondFragment extends Fragment {
     public SecondFragment(){
 
     }
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         //Infla el layout para el fragmento
         return inflater.inflate(R.layout.second_fragment, container, false);
