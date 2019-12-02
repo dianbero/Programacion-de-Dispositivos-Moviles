@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,10 +14,31 @@ import java.util.ArrayList;
 import es.iesnervion.diana.equiposviewmodel.Models.Equipo;
 import es.iesnervion.diana.equiposviewmodel.R;
 
-public class AdapterEquipo extends ArrayAdapter<Equipo> {
+public class AdapterEquipo extends BaseAdapter {
 
-    public AdapterEquipo(Context context, ArrayList<Equipo> equipos){
-        super(context, 0, equipos);
+    private Context context;
+    private ArrayList<Equipo> equipoArrayList;
+
+//    public AdapterEquipo(Context context, ArrayList<Equipo> equipoArrayList){
+//        this.context = context;
+//        this.equipoArrayList = equipoArrayList;
+//    }
+
+
+
+    @Override
+    public int getCount() {
+        return 0;
+    }
+
+    @Override
+    public Object getItem(int i) {
+        return null;
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return 0;
     }
 
     public View getView(int posicion, View convertView, ViewGroup parent){
@@ -40,6 +62,7 @@ public class AdapterEquipo extends ArrayAdapter<Equipo> {
         //Devuelve la vista completa
         return convertView;
     }
+
 
 
 }
