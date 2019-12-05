@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ej2_PracticaCheckBox</string>
+    <string name="instrucciones">Elige una de las siguientes opciones</string>
+    <string name="negrita">Negrita</string>
+    <string name="gigante">Fuente Gigante</string>
+    <string name="minuscula">Fuente Minúscula</string>
+    <string name="colorRojo">Color rojo</string>
+</resources>

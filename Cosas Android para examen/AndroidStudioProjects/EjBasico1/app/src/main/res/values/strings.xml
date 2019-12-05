@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Sumar dos valores</string>
+    <string name="nombre">Escribe dos números</string>
+</resources>

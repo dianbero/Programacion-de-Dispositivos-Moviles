@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sumar dos números</string>
+    <string name="num1">Introduce primer número</string>
+    <string name="num2">Introduce segundo número</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado"></string>
+</resources>
