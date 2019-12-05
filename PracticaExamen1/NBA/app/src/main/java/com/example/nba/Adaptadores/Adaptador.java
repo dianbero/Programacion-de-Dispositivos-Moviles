@@ -65,9 +65,6 @@ public class Adaptador extends ArrayAdapter <Equipo>{
         holder.getConferencia().setText(e.getConferencia());
         holder.getImagen().setBackgroundResource(e.getImagen());
 
-
-
-
         return row;
     }
 }

@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "2",
+                        "startOffsets": "53",
+                        "endColumns": "46",
+                        "endOffsets": "97"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}

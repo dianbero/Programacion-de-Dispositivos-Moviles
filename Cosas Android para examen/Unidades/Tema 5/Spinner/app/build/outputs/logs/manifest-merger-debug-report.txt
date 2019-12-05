@@ -1,0 +1,41 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:2:1-18:12
+	package
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:2:11-54
+		INJECTED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml
+		INJECTED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:3:11-69
+application
+ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:5:3-13:17
+	android:icon
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:5:16-43
+activity#com.commonsware.android.selection.SpinnerDemo
+ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:6:5-12:16
+	android:label
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:6:15-42
+	android:name
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:7:15-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:8:7-11:23
+action#android.intent.action.MAIN
+ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:9:9-61
+	android:name
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:9:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:10:9-69
+	android:name
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:10:19-66
+supports-screens
+ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:14:3-17:51
+	android:largeScreens
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:15:21-48
+	android:smallScreens
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:17:21-48
+	android:normalScreens
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:16:21-49
+	android:anyDensity
+		ADDED from /home/dbejarano_local/Escritorio/DAM_GitUbuntu/Programacion-de-Dispositivos-Moviles/Cosas Android para examen/Unidades/Tema 5/Spinner/app/src/main/AndroidManifest.xml:14:21-46
