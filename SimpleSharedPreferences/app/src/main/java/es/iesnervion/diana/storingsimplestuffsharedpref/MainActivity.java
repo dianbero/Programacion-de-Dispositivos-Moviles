@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText txtNombre;
-        EditText txtapellido;
+        EditText txtNombre = (EditText)findViewById(R.id.escribirNombre);
+        EditText txtapellido = (EditText) findViewById(R.id.escribirApellido);
 
         /*I'm working with this tutorial:
         * https://stackoverflow.com/questions/5950043/how-to-use-getsharedpreferences-in-android
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Get the instance
         //Can be opened only from this app
-        SharedPreferences userDetails = this.getSharedPreferences("userDetails", MODE_PRIVATE);
+        SharedPreferences userDetails = getApplicationContext().getSharedPreferences("userDetails", MODE_PRIVATE);
 
         //Save values in SharedPreferences
         Editor edit = userDetails.edit();
