@@ -1,6 +1,11 @@
 package es.iesnervion.diana.nbaroom.Entities;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Jugador {
+    @PrimaryKey
     private int idEquipo;
     private String nombre;
     private String posicion;

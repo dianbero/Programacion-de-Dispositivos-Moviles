@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /*Help:
+        * Getting ready for Room:
+        * https://developer.android.com/jetpack/androidx/releases/room?hl=es-419
         * cómo guardar contenido en BBDD con Room:
         * https://developer.android.com/training/data-storage/room
         * Steps to implement Room library:

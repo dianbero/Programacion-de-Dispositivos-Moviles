@@ -1,6 +1,10 @@
 package es.iesnervion.diana.nbaroom.Entities;
 
+import androidx.room.Entity;
+
+@Entity
 public class Equipo {
+
     private Integer imagen;
     private String nombre;
     private String conferencia;
