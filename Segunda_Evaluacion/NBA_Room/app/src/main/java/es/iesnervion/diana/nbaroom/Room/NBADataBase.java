@@ -9,7 +9,7 @@ import es.iesnervion.diana.nbaroom.Entities.Jugador;
 import es.iesnervion.diana.nbaroom.Interfaces.EquipoDao;
 
 @Database(entities = {Equipo.class, Jugador.class}, version = 1)
-public abstract class NBADataBase extends RoomDatabase{
+public abstract class NBADataBase /*extends RoomDatabase*/{
     public abstract EquipoDao equipoDao();
     private  static NBADataBase INSTANCE;
 
@@ -17,6 +17,7 @@ public abstract class NBADataBase extends RoomDatabase{
         if (INSTANCE == null){
 
         }
+        return INSTANCE; //Por poner algo para que no me muestre error
     }
 
 

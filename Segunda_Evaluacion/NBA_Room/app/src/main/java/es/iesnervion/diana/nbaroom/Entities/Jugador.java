@@ -2,25 +2,34 @@ package es.iesnervion.diana.nbaroom.Entities;
 
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Jugadores", foreignKeys = @ForeignKey(entity = Equipo.class, parentColumns = "idEquipo", childColumns = "idEquipo"))
 public class Jugador {
 
+    //Atributos Privados
     private int idEquipo;
     @PrimaryKey
     private int idJugador;
     private String nombre;
-    private String posicion;
+    private int posicion;
     private int dorsal;
 
-    public Jugador(int idEquipo, String nombre, String posicion, int dorsal) {
+    @Ignore //Para que no cree entidades de persistencia de este constructor, que lo necesito para las listas
+    public Jugador(String nombre, int posicion) {
+        this.nombre = nombre;
+        this.posicion = posicion;
+    }
+
+    public Jugador(int idEquipo, String nombre, int posicion, int dorsal) {
         this.idEquipo = idEquipo;
         this.nombre = nombre;
         this.posicion = posicion;
         this.dorsal = dorsal;
     }
 
+    //Getters and Setters
     public int getIdJugador() {
         return idJugador;
     }
@@ -37,7 +46,7 @@ public class Jugador {
         return nombre;
     }
 
-    public String getPosicion() {
+    public int getPosicion() {
         return posicion;
     }
 

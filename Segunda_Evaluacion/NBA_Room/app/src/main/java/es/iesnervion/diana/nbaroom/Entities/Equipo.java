@@ -7,12 +7,14 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "Equipos") //Necesario para las consultas
 public class Equipo {
 
+    //Atributos privados
     @PrimaryKey
     private int idEquipo;
     @Ignore
     private Integer imagen;
     private String nombre;
 
+    //Getters and Setters
     public int getIdEquipo() {
         return idEquipo;
     }
