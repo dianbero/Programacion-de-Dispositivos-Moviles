@@ -8,6 +8,11 @@ public class ViewHolderEquipo {
     private ImageView imagen;
     private TextView nombre;
 
+    public ViewHolderEquipo(){
+        this.imagen = null;
+        this.nombre = null;
+    }
+
     public ViewHolderEquipo(ImageView imagen, TextView nombre){
         this.imagen = imagen;
         this.nombre = nombre;
