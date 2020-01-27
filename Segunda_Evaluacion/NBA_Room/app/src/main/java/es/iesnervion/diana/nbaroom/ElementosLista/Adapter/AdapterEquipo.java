@@ -32,8 +32,8 @@ public class AdapterEquipo extends ArrayAdapter<Equipo> {
     public View getView(int position, View convertView, ViewGroup parent){ //position es el índice del ArrayList
         //Busca el elemento con el índice position en ArrayList<Equipo>
         Equipo equipo = getItem(position);
-        ViewHolderEquipo equipoHolder;
-        ImageView vistaNombre;
+        ViewHolderEquipo equipoHolder = null;
+        ImageView imgEquipo ;
         TextView nombreEquipo;
 
         //Infla la fila sólo una vez
@@ -41,22 +41,22 @@ public class AdapterEquipo extends ArrayAdapter<Equipo> {
 
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.fila_equipos,null,false);
 
-            vistaNombre = (ImageView) convertView.findViewById(R.id.imgEquipo);
+            imgEquipo = (ImageView) convertView.findViewById(R.id.imgEquipo);
             nombreEquipo = (TextView) convertView.findViewById(R.id.nombreEquipo);
 
             //Paso los elementos al viewHolder de Equipo
-            equipoHolder = new ViewHolderEquipo(vistaNombre, nombreEquipo);
-
-            equipoHolder.getNombre().setText(equipo.getNombre());
-            equipoHolder.getImagen().setImageResource(equipo.getImagen());
+            equipoHolder = new ViewHolderEquipo(imgEquipo, nombreEquipo);            
 
             //Almacenar objeto VielHolder en convertView (resultados de findViewByID)
             convertView.setTag(equipoHolder);
-        }
 
+        }/*else{
+            equipoHolder = (ViewHolderEquipo)convertView.getTag();
+        }*/
 
-
-
+        //Recupera el objeto ViewHolder desde ConvertView cada vez que getView() es llamado
+        equipoHolder.getNombre().setText(equipo.getNombre());
+        equipoHolder.getImagen().setImageResource(equipo.getImagen());
 
         return convertView;
     }

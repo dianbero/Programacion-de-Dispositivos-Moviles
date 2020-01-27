@@ -69,7 +69,8 @@ public class AdaptadorJugador extends BaseAdapter {
         holder.getPosicion().setText(j.getPosicion());
         holder.getDorsal().setBackgroundResource(j.getDorsal());
 
-        return(row);
+        return row;
+
         }
     }
 
