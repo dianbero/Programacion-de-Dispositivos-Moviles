@@ -10,4 +10,6 @@ public class JugadorActivity extends AppCompatActivity {
     private ArrayList<Jugador> jugadores;
 
 
+
+
 }
