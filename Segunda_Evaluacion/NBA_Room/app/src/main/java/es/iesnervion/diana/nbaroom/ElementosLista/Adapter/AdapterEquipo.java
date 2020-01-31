@@ -24,6 +24,7 @@ import es.iesnervion.diana.nbaroom.R;
 * */
 public class AdapterEquipo extends ArrayAdapter<Equipo> {
 
+
     public AdapterEquipo(@NonNull Context context, int resource, @NonNull ArrayList<Equipo> listaEquipos) {
         super(context, resource, listaEquipos);
 

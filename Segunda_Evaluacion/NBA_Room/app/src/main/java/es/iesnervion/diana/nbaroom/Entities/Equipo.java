@@ -2,6 +2,7 @@ package es.iesnervion.diana.nbaroom.Entities;
 
 import androidx.room.Entity;
 import androidx.room.Ignore;
+import androidx.room.Index;
 import androidx.room.Insert;
 import androidx.room.PrimaryKey;
 
@@ -14,6 +15,10 @@ public class Equipo {
     @Ignore
     private Integer imagen;
     private String nombre;
+
+    public Equipo(){
+
+    }
 
     @Ignore
     public Equipo(Integer imagen, String nombre) {

@@ -64,8 +64,6 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         intent.putExtra("id", i);
         startActivity(intent);
 
-
-
     }
 
 }

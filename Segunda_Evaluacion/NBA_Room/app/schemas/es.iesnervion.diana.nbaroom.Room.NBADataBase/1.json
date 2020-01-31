@@ -1,0 +1,98 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "ac577f8e5f0a516eb5fccdbb47ee235e",
+    "entities": [
+      {
+        "tableName": "Equipos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idEquipo` INTEGER NOT NULL, `nombre` TEXT, PRIMARY KEY(`idEquipo`))",
+        "fields": [
+          {
+            "fieldPath": "idEquipo",
+            "columnName": "idEquipo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idEquipo"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Jugadores",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idEquipo` INTEGER NOT NULL, `idJugador` INTEGER NOT NULL, `nombre` TEXT, `posicion` INTEGER NOT NULL, PRIMARY KEY(`idJugador`), FOREIGN KEY(`idEquipo`) REFERENCES `Equipos`(`idEquipo`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "idEquipo",
+            "columnName": "idEquipo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idJugador",
+            "columnName": "idJugador",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "posicion",
+            "columnName": "posicion",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idJugador"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_Jugadores_idEquipo",
+            "unique": false,
+            "columnNames": [
+              "idEquipo"
+            ],
+            "createSql": "CREATE  INDEX `index_Jugadores_idEquipo` ON `${TABLE_NAME}` (`idEquipo`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Equipos",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "idEquipo"
+            ],
+            "referencedColumns": [
+              "idEquipo"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"ac577f8e5f0a516eb5fccdbb47ee235e\")"
+    ]
+  }
+}

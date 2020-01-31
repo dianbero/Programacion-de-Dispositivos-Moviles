@@ -27,8 +27,8 @@ public interface EquipoDao {
     public void deleteEquipo(Equipo equipos);
 
     //Consultas
-    @Query("SELECT * FROM Equipos") //Equipo es el nombre establecido en "tableName" como el nombre de la table en la base de datos, en la clase de la entidad, y es necesario
-    public ArrayList<Equipo> listaEquipos();
+//    @Query("SELECT * FROM Equipos") //Equipo es el nombre establecido en "tableName" como el nombre de la table en la base de datos, en la clase de la entidad, y es necesario
+//    public ArrayList<Equipo> listaEquipos();
 
     @Query("SELECT * FROM Equipos WHERE idEquipo = :id LIMIT 1") //Limita el número de filas obtenidas a 1
     public Equipo getEquipoBD(int id);

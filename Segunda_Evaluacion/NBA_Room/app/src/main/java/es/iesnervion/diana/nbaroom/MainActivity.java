@@ -3,14 +3,17 @@ package es.iesnervion.diana.nbaroom;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import es.iesnervion.diana.nbaroom.ElementosLista.Adapter.AdapterEquipo;
 import es.iesnervion.diana.nbaroom.ElementosLista.Tools.Tools;
 import es.iesnervion.diana.nbaroom.Entities.Equipo;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
 
     private ArrayList<Equipo> listaEquipos;
@@ -34,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
         listaEquipos = tools.listaEquipos();
 
         //Instanciar listView
-        ListView listView =
+        ListView listView = (ListView) findViewById(R.id.listaquipos);
+        //Pasa listView al Adapter
+        AdapterEquipo adEquipo = new AdapterEquipo(this, R.layout.fila_equipos, listaEquipos);
 
     }
 
