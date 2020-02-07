@@ -1,6 +1,7 @@
 package es.iesnervion.diana.nbaroom;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.os.Bundle;
 import android.widget.Adapter;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import es.iesnervion.diana.nbaroom.ElementosLista.Adapter.AdapterEquipo;
 import es.iesnervion.diana.nbaroom.ElementosLista.Tools.Tools;
 import es.iesnervion.diana.nbaroom.Entities.Equipo;
+import es.iesnervion.diana.nbaroom.Room.NBADataBase;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -35,9 +37,12 @@ public class MainActivity extends AppCompatActivity{
         Tools tools = new Tools();
 
         listaEquipos = tools.listaEquipos();
+        //Instancio BD Room:
+        NBADataBase db = Room.databaseBuilder(getApplicationContext(),NBADataBase.class,"NBARoom").build();
 
         //Instanciar listView
         ListView listView = (ListView) findViewById(R.id.listaquipos);
+        //TODO revisar por qué falla
         //Pasa listView al Adapter
         AdapterEquipo adEquipo = new AdapterEquipo(this, R.layout.fila_equipos, listaEquipos);
 

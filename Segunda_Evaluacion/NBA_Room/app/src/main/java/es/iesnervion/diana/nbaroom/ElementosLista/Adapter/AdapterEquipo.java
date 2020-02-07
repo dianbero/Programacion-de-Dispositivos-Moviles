@@ -39,7 +39,7 @@ public class AdapterEquipo extends ArrayAdapter<Equipo> {
 
         //Infla la fila sólo una vez
         if (convertView == null){
-
+            //Infla la fila (crea su contenido)
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.fila_equipos,null,false);
 
             imgEquipo = (ImageView) convertView.findViewById(R.id.imgEquipo);

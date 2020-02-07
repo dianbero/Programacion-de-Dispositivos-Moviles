@@ -11,14 +11,16 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+        //Configuración extra para Room
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [
                         "room.schemaLocation":"$projectDir/schemas".toString(),
-//                        "room.incremental":"true",
+                        "room.incremental":"true",
                         "room.expandProjection":"true"]
             }
         }
+
 
     }
     buildTypes {

@@ -11,15 +11,16 @@ import es.iesnervion.diana.nbaroom.Interfaces.EquipoDao;
 
 @Database(entities = {Equipo.class, Jugador.class}, version = 1)
 public abstract class NBADataBase extends RoomDatabase {
+
     public abstract EquipoDao equipoDao();
-    private  static NBADataBase INSTANCE;
 
-    static NBADataBase getDataBase(final Context context){
-        if (INSTANCE == null){
+//    private  static NBADataBase INSTANCE;
 
-        }
-        return INSTANCE; //Por poner algo para que no me muestre error
-    }
-
+//    static NBADataBase getDataBase(final Context context){
+//        if (INSTANCE == null){
+//
+//        }
+//        return INSTANCE; //Por poner algo para que no me muestre error
+//    }
 
 }

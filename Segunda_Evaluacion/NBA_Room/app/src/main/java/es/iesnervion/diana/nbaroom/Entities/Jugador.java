@@ -1,5 +1,6 @@
 package es.iesnervion.diana.nbaroom.Entities;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Ignore;
@@ -10,10 +11,13 @@ import androidx.room.PrimaryKey;
 public class Jugador {
 
     //Atributos Privados
+    @ColumnInfo(name = "idEquipo")
     private int idEquipo;
     @PrimaryKey
     private int idJugador;
+    @ColumnInfo(name = "nombre")
     private String nombre;
+    @ColumnInfo(name = "posicion")
     private int posicion;
 
     public Jugador(){
