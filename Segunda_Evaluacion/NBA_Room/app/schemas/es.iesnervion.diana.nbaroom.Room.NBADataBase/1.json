@@ -2,17 +2,23 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "ac577f8e5f0a516eb5fccdbb47ee235e",
+    "identityHash": "55a1d161fd6667895f00eadac36f5522",
     "entities": [
       {
         "tableName": "Equipos",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idEquipo` INTEGER NOT NULL, `nombre` TEXT, PRIMARY KEY(`idEquipo`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idEquipo` INTEGER NOT NULL, `imagen` INTEGER, `nombre` TEXT, PRIMARY KEY(`idEquipo`))",
         "fields": [
           {
             "fieldPath": "idEquipo",
             "columnName": "idEquipo",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "imagen",
+            "columnName": "imagen",
+            "affinity": "INTEGER",
+            "notNull": false
           },
           {
             "fieldPath": "nombre",
@@ -92,7 +98,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"ac577f8e5f0a516eb5fccdbb47ee235e\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"55a1d161fd6667895f00eadac36f5522\")"
     ]
   }
 }
