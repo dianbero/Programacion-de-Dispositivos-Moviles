@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/listaAtletas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+<!--    <fragment-->
+<!--        android:id="@+id/detalles"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:name="es.iesnervion.diana.a2examen2eval.Fragments.FragmentDetalles"-->
+<!--        tools:layout="@layout/fragment_listado"/>-->
+
+</LinearLayout>

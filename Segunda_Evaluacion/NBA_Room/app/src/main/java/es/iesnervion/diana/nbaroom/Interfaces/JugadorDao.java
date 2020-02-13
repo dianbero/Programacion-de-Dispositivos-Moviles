@@ -8,6 +8,7 @@ import androidx.room.Update;
 import java.util.ArrayList;
 
 import es.iesnervion.diana.nbaroom.Entities.Jugador;
+
 @Dao
 public interface JugadorDao {
     //Inserción
