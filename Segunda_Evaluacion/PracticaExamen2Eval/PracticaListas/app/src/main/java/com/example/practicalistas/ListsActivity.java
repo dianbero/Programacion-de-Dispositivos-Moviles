@@ -30,8 +30,6 @@ public class ListsActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listaUsuario);
         listView.setAdapter(adapterUsuario);
 
-
-
     }
 
     public void volverALogin(View view) {

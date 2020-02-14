@@ -12,6 +12,7 @@
         android:gravity="center"
         android:textSize="25dp"
         android:text="sfdsa"/>
+
     <TextView
         android:id="@+id/edad"
         android:layout_width="match_parent"
