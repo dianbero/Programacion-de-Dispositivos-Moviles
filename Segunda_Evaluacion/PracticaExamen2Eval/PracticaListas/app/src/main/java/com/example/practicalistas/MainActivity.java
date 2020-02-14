@@ -23,21 +23,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-//        //Construir la fuente de datos
-//        ArrayList<Usuario> listaUsuarios = new ListaUsuarios().getListaUsuarios();
-//        //Crea el adapter para convertir el array a las vistas
-//        UsuarioAdapter adapterUsuario = new UsuarioAdapter(this,0,listaUsuarios);
-//        //Incluir adapter en ListView
-//        ListView listView = (ListView) findViewById(R.id.listaUsuario);
-//        listView.setAdapter(adapterUsuario);
+        //Construir la fuente de datos
+        ArrayList<Usuario> listaUsuarios = new ListaUsuarios().getListaUsuarios();
+        //Crea el adapter para convertir el array a las vistas
+        UsuarioAdapter adapterUsuario = new UsuarioAdapter(this,0,listaUsuarios);
+        //Incluir adapter en ListView
+        ListView listView = (ListView) findViewById(R.id.listaUsuario);
+        listView.setAdapter(adapterUsuario);
 
         Button btn = (Button)findViewById(R.id.btnLogin);
 
     }
 
 
-    public void login(View view) {
-        Intent intent = new Intent(this, ListsActivity.class);
-        startActivity(intent);
-    }
+//    public void login(View view) {
+//        Intent intent = new Intent(this, ListsActivity.class);
+//        startActivity(intent);
+//    }
 }
