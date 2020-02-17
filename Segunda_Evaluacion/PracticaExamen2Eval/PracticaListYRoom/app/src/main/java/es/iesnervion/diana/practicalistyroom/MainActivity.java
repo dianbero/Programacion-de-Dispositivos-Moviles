@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 import es.iesnervion.diana.practicalistyroom.Activities.ListaUsuariosActivity;
+import es.iesnervion.diana.practicalistyroom.Activities.PruebaFuncionamiento;
+import es.iesnervion.diana.practicalistyroom.Tools.ListaUsuarios;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,19 +18,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = (Button) findViewById(R.id.btnLogin);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ListaUsuariosActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
+//        Button button = (Button) findViewById(R.id.btnLogin);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), ListaUsuariosActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
-
-
 
 
 //    public void login(View view) {
@@ -37,4 +35,11 @@ public class MainActivity extends AppCompatActivity {
 //            startActivity(intent);
 //        }
 //    }
+
+    public void login(View view) {
+        if (view.getId() == R.id.btnLogin) {
+            Intent intent = new Intent(this, ListaUsuariosActivity.class);
+            startActivity(intent);
+        }
+    }
 }
