@@ -37,11 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
 //        ArrayList<Usuario> lista =  guardarDatosEnLista();
 
-        if (view.getId() == R.id.btnLogin) {
-            Intent intent = new Intent(this, ListaUsuariosActivity.class);
-//            intent.putExtra("lista", lista);
-            startActivity(intent);
-        }
     }
 
     public ArrayList<Usuario> guardarDatosEnLista() {
@@ -49,5 +44,13 @@ public class MainActivity extends AppCompatActivity {
         int edad = Integer.parseInt(txtEdad.getText().toString());
 
         return new ListaUsuarios().addNuevoUsuario(nombre, edad);
+    }
+
+    public void verLista(View view) {
+        if (view.getId() == R.id.btnLista) {
+            Intent intent = new Intent(this, ListaUsuariosActivity.class);
+//            intent.putExtra("lista", lista);
+            startActivity(intent);
+        }
     }
 }
