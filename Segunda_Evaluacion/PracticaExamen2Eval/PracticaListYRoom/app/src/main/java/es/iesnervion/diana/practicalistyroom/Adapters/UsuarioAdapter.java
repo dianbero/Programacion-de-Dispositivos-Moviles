@@ -49,7 +49,7 @@ public class UsuarioAdapter extends ArrayAdapter<Usuario> {
             //Le paso los elementos al ViewHolder
             usuarioViewHolder = new UsuarioViewHolder(nombre, edad);
 
-            // Cache the viewHolder object inside the fresh view
+            // Cache the viewHolder object inside the nueva vista
             convertView.setTag(usuarioViewHolder);
 
         } else {
