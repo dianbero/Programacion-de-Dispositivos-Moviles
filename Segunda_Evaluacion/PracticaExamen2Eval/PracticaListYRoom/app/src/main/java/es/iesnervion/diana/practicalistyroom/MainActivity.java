@@ -31,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
         txtNombre = (EditText) findViewById(R.id.loginNombre);
         txtEdad = (EditText) findViewById(R.id.loginEdad);
 
-
     }
 
     public void login(View view) {
 
-//        guardarDatosEnLista();
+//        ArrayList<Usuario> lista =  guardarDatosEnLista();
 
         if (view.getId() == R.id.btnLogin) {
             Intent intent = new Intent(this, ListaUsuariosActivity.class);
+//            intent.putExtra("lista", lista);
             startActivity(intent);
         }
     }
