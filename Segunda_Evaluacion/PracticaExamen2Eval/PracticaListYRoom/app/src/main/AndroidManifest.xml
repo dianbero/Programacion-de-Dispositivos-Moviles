@@ -18,6 +18,7 @@
         </activity>
 <!--        <activity android:name=".Activities.PruebaFuncionamiento"/>-->
         <activity android:name=".Activities.ListaUsuariosActivity"/>
+        <activity android:name=".Activities.UsuarioRegistradoActivity"/>
     </application>
 
 </manifest>

@@ -30,7 +30,7 @@
         android:id="@+id/loginNombre"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="lalal"
+        android:hint="Name"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
