@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -28,12 +32,50 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //TODO guardar datos insertados del login en la lista
-        //TODO añadir otro botón al inicio para mostrar directamente la lista sin añadir nuevo usuario
 
         txtNombre = (EditText) findViewById(R.id.loginNombre);
         txtEdad = (EditText) findViewById(R.id.loginEdad);
 
+        //TODO cambiar texto de error rojo a texto color normal cuando se va a escribir
+        //TODO intentar esto en otro momento
+        //1-Cuando se pulsa para escribir se borra texto en rojo
+        //2-Cuando se escribe el texto ya ha cambiado de color
+        /*Help:
+        * try with: setOnEditorActionListener(new OnEditorActionListener()
+        *
+        * Esto creo que no es: addTextChangedListener();*/
+//        txtNombre.setOnEditorActionListener(cambiarColorTextoAlVolverAEscribir());
+
+        //TODO guardar datos introducidos en lista
+
+
+
+
     }
+
+    /**
+     * Método que cambia el color de texto de mensaje de error a color normal
+     * al volver a escribir
+     * @return
+     */
+//    public TextView.OnEditorActionListener cambiarColorTextoAlVolverAEscribir(){
+//        TextView.OnEditorActionListener editor = new TextView.OnEditorActionListener() {
+//            @Override
+//            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+//                if(txtNombre.getTextColors().equals(Color.RED)){
+//                    txtNombre.setTextColor(Color.BLACK);
+//                }
+//
+//                if (txtEdad.getTextColors().equals(Color.RED)){
+//                    txtEdad.setTextColor(Color.BLACK);
+//                }
+//
+//                return false;
+//            }
+//        };
+//
+//        return editor;
+//    }
 
 //    public void login(View view) {
 //
@@ -51,7 +93,9 @@ public class MainActivity extends AppCompatActivity {
         //Si la entrada de edad no está vacía lo asigna a un entero
         int edad = 0;
         boolean esNumero = true;
-        boolean isEmpty = txtEdad.getText().toString().isEmpty();
+        boolean nombreCorrecto = false;
+        boolean edadCorrecta = false;
+//        boolean isEmpty = txtEdad.getText().toString().isEmpty(); //Lo hice porque fallaba si lo ponía directamente, pero ahora parece que va
 
         //Comprobar que lo introducido en textBox edad es un número
         try {
@@ -60,25 +104,26 @@ public class MainActivity extends AppCompatActivity {
             esNumero = false;
         }
 
-        //Si el nombre no está vacío
-        if (!txtNombre.getText().toString().equals("")) {
+        //Si el nombre no está vacío y es distinto al mensaje error
+        if (!txtNombre.getText().toString().equals("") && !txtNombre.getText().toString().equals("Must add an name")) {
             intent.putExtra("nombre", nombre);
+            nombreCorrecto = true;
         }
         //si está vacío
         else {
             //debe añadir edad y colorear en rojo
-            txtEdad.setText("Must add an name");
-            txtEdad.setTextColor(Color.RED);
+            txtNombre.setText("Must add an name");
+            txtNombre.setTextColor(Color.RED);
         }
 
         //Si la edad no está vacía y es un número
-        if (!isEmpty && esNumero) {
+        if (!txtEdad.getText().toString().isEmpty() && esNumero) {
             intent.putExtra("edad", edad);
             //Empieza actividad con intent con Nombre y edad
-            startActivity(intent);
+            edadCorrecta = true;
         }
         //Si está vacía
-        else if (isEmpty) {
+        else if (txtEdad.getText().toString().isEmpty()) {
             //Debe introducir un numero
             txtEdad.setText("Must add an age");
             txtEdad.setTextColor(Color.RED);
@@ -90,19 +135,15 @@ public class MainActivity extends AppCompatActivity {
             txtEdad.setTextColor(Color.RED);
         }
 
+        //Si los datos son correctos empieza actividad
+        if (nombreCorrecto && edadCorrecta) {
+            startActivity(intent);
+        }
 
-        ////////////////
-//        if (!txtEdad.getText().toString().equals("")) {
-//            edad = Integer.parseInt(txtEdad.getText().toString());
-//            intent.putExtra("nombre", nombre);
-//            intent.putExtra("edad", edad);
-//            startActivity(intent);
-//
-//        } else {
-//            txtEdad.setText("Must add an age");
-//            txtEdad.setTextColor(Color.RED);
-//        }
     }
+
+
+
 
 
     //    public ArrayList<Usuario> guardarDatosEnLista() {
