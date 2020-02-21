@@ -50,21 +50,58 @@ public class MainActivity extends AppCompatActivity {
         String nombre = txtNombre.getText().toString();
         //Si la entrada de edad no está vacía lo asigna a un entero
         int edad = 0;
-        if (!txtEdad.getText().toString().equals("")) {
-            edad = Integer.parseInt(txtEdad.getText().toString());
-            intent.putExtra("nombre", nombre);
-            intent.putExtra("edad", edad);
-            startActivity(intent);
+        boolean esNumero = true;
+        boolean isEmpty = txtEdad.getText().toString().isEmpty();
 
-        } else {
+        //Comprobar que lo introducido en textBox edad es un número
+        try {
+            edad = Integer.parseInt(txtEdad.getText().toString());
+        } catch (Exception e) {
+            esNumero = false;
+        }
+
+        //Si el nombre no está vacío
+        if (!txtNombre.getText().toString().equals("")) {
+            intent.putExtra("nombre", nombre);
+        }
+        //si está vacío
+        else {
+            //debe añadir edad y colorear en rojo
+            txtEdad.setText("Must add an name");
+            txtEdad.setTextColor(Color.RED);
+        }
+
+        //Si la edad no está vacía y es un número
+        if (!isEmpty && esNumero) {
+            intent.putExtra("edad", edad);
+            //Empieza actividad con intent con Nombre y edad
+            startActivity(intent);
+        }
+        //Si está vacía
+        else if (isEmpty) {
+            //Debe introducir un numero
             txtEdad.setText("Must add an age");
+            txtEdad.setTextColor(Color.RED);
+        }
+        //Si no es un número
+        else {
+            //debe añadir un nombre
+            txtEdad.setText("Must type a number");
             txtEdad.setTextColor(Color.RED);
         }
 
 
-        //Identifico los datos para pasar al intent
-
-
+        ////////////////
+//        if (!txtEdad.getText().toString().equals("")) {
+//            edad = Integer.parseInt(txtEdad.getText().toString());
+//            intent.putExtra("nombre", nombre);
+//            intent.putExtra("edad", edad);
+//            startActivity(intent);
+//
+//        } else {
+//            txtEdad.setText("Must add an age");
+//            txtEdad.setTextColor(Color.RED);
+//        }
     }
 
 
