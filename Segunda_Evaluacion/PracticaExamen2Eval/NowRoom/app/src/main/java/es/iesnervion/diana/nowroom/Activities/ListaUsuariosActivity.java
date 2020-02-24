@@ -1,4 +1,4 @@
-package es.iesnervion.diana.practicalistyroom.Activities;
+package es.iesnervion.diana.nowroom.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,11 +10,11 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-import es.iesnervion.diana.practicalistyroom.Adapters.UsuarioAdapter;
-import es.iesnervion.diana.practicalistyroom.MainActivity;
-import es.iesnervion.diana.practicalistyroom.Models.Usuario;
-import es.iesnervion.diana.practicalistyroom.R;
-import es.iesnervion.diana.practicalistyroom.Tools.ListaUsuarios;
+import es.iesnervion.diana.nowroom.Adapters.UsuarioAdapter;
+import es.iesnervion.diana.nowroom.MainActivity;
+import es.iesnervion.diana.nowroom.Models.Usuario;
+import es.iesnervion.diana.nowroom.R;
+import es.iesnervion.diana.nowroom.Tools.ListaUsuarios;
 
 public class ListaUsuariosActivity extends Activity {
     @Override

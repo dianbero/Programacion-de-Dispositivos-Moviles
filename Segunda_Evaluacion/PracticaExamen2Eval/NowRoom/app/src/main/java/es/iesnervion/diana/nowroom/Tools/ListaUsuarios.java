@@ -1,8 +1,9 @@
-package es.iesnervion.diana.practicalistyroom.Tools;
+package es.iesnervion.diana.nowroom.Tools;
 
 import java.util.ArrayList;
 
-import es.iesnervion.diana.practicalistyroom.Models.Usuario;
+import es.iesnervion.diana.nowroom.Models.Usuario;
+
 
 public class ListaUsuarios {
 

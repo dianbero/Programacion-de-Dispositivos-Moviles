@@ -1,4 +1,4 @@
-package es.iesnervion.diana.practicalistyroom;
+package es.iesnervion.diana.nowroom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import es.iesnervion.diana.practicalistyroom.Activities.ListaUsuariosActivity;
-import es.iesnervion.diana.practicalistyroom.Activities.UsuarioRegistradoActivity;
+import es.iesnervion.diana.nowroom.Activities.ListaUsuariosActivity;
+import es.iesnervion.diana.nowroom.Activities.UsuarioRegistradoActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,12 +18,11 @@ public class MainActivity extends AppCompatActivity {
     private String nombre;
     private int edad;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //TODO guardar datos insertados del login en la lista
 
         txtNombre = (EditText) findViewById(R.id.loginNombre);
         txtEdad = (EditText) findViewById(R.id.loginEdad);
@@ -155,5 +154,4 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
 }
