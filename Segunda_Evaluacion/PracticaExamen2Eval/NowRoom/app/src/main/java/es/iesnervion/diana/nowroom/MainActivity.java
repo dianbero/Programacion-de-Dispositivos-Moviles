@@ -18,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
     private String nombre;
     private int edad;
 
+    /*
+    * Help with Room:
+    * https://medium.com/mindorks/using-room-database-android-jetpack-675a89a0e942
+    * */
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

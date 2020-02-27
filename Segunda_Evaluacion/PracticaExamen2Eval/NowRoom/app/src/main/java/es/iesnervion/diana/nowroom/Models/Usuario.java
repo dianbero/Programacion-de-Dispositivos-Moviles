@@ -1,10 +1,21 @@
 package es.iesnervion.diana.nowroom.Models;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "Usuarios")
 public class Usuario {
+    @PrimaryKey
     private int id;
+    @ColumnInfo(name = "nombre")
     private String nombre;
+    @ColumnInfo(name = "apellido")
     private String apellido;
+    @ColumnInfo(name = "edad")
     private int edad;
+    @ColumnInfo(name = "password")
     private String password;
 
     public Usuario() {
@@ -15,11 +26,13 @@ public class Usuario {
         this.password = "123";
     }
 
+    @Ignore
     public Usuario(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
     }
 
+    @Ignore
     public Usuario(int id, String nombre, String apellido, int edad, String password) {
         this.id = id;
         this.nombre = nombre;
