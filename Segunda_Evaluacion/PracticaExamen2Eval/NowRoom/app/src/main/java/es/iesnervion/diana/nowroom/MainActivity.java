@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
     private int edad;
 
     /*
-    * Help with Room:
-    * https://medium.com/mindorks/using-room-database-android-jetpack-675a89a0e942
-    * */
-
+     * Help with Room:
+     * https://medium.com/mindorks/using-room-database-android-jetpack-675a89a0e942
+     * */
+    //TODO falta instanciar base datos room
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Método manda los datos introducidos en la vista a una vista y los muestra
+     *
      * @param view
      */
     public void login(View view) {
@@ -149,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Método que inicia la actividad de la lista de elementos
+     *
      * @param view
      */
     public void verLista(View view) {

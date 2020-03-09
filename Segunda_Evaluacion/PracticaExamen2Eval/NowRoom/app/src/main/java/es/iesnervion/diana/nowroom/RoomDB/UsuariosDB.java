@@ -11,14 +11,24 @@ import es.iesnervion.diana.nowroom.Models.Usuario;
 
 @Database(entities = {Usuario.class}, version = 1)
 public abstract class UsuariosDB extends RoomDatabase {
-    private static UsuariosDB INSTANCE;
+
+    //Declarando la variable "volatile" obliga JVM a usar los valores de la mamoria proncipal y no de la caché
+    private static volatile UsuariosDB INSTANCE;
+
+    private static final String DB_NAME = "Usuarios";
 
     public abstract UsuarioDAO usuario();
 
-    public static UsuariosDB getUsuariosDB(Context context){
-        if (INSTANCE==null){
-            INSTANCE = Room.databaseBuilder((context.getApplicationContext(), UsuariosDB.class, ))
+    public static synchronized UsuariosDB getUsuariosDB(Context context) {
+        if (INSTANCE == null) {
+            INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+                    UsuariosDB.class,
+                    DB_NAME)
+                    .fallbackToDestructiveMigration().build();
         }
+        return INSTANCE;
     }
+
+//    public abstract UsuarioDAO usuarioDAO();
 
 }
