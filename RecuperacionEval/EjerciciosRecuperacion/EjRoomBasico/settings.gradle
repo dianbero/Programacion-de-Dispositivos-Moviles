@@ -1,0 +1,2 @@
+rootProject.name='EjRoomBasico'
+include ':app'

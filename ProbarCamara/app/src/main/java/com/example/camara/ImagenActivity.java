@@ -30,7 +30,7 @@ public class ImagenActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void volverPaginaPrincipalIntent(){
-        Intent intentVolver = new Intent(ImagenActivity.this, MainActivity.class);
+        Intent intentVolver = new Intent(this, MainActivity.class);
         startActivity(intentVolver);
     }
 }

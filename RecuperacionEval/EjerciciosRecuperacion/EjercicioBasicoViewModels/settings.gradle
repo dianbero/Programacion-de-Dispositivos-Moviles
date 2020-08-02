@@ -1,0 +1,2 @@
+rootProject.name='EjercicioBasicoViewModels'
+include ':app'
