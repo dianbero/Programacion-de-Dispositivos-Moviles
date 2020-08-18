@@ -8,6 +8,10 @@ import androidx.lifecycle.AndroidViewModel;
 import com.example.basicroomensegundoplano.API.ApiDBResources;
 import com.example.basicroomensegundoplano.Entities.User;
 
+/**
+ * Esta clase no llego a utilizarla
+ */
+
 public class MainActivityVM extends AndroidViewModel {
 
     private ApiDBResources api;

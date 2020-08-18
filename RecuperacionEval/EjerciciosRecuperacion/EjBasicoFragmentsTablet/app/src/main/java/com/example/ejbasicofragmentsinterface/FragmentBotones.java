@@ -39,7 +39,9 @@ public class FragmentBotones extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_fragment_botones, container, false);
 
         //Instancio el ViewModel
-        vm = new ViewModelProvider(requireActivity()).get(FragmentsSharedViewModel.class);
+        vm = new ViewModelProvider(requireActivity()).get(FragmentsSharedViewModel.class); //Uso requireActivity() en lugar de 'this',
+                                                                                        // porque es lo que devuelve la vista del fragment,
+                                                                                        // para fragments tengo siempre que usar ese método en lugar de 'this'
 
         //Instancio elementos de la vista
         boton1 = view.findViewById(R.id.boton1);

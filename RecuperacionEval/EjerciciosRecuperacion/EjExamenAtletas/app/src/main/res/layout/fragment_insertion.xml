@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.InsertionFragment"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:id="@+id/insertion">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -15,17 +16,16 @@
         android:layout_marginRight="40dp"
         android:text="Name:"
         android:textSize="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="-75dp"/>
+        android:layout_marginBottom="20dp"/>
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/editName"
         android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         />
     <TextView
         android:text="Surname:"
@@ -34,17 +34,17 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         />
 
     <EditText
-        android:id="@+id/surname"
+        android:id="@+id/editSurname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         />
 
     <TextView
@@ -54,12 +54,12 @@
         android:textSize="20dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
 
         />
 
     <EditText
-        android:id="@+id/observations"
+        android:id="@+id/editObservations"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -67,7 +67,7 @@
         android:height="200dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         />
 
     <Button
@@ -79,7 +79,6 @@
         android:height="100dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="-60dp"
         />
 
 </LinearLayout>

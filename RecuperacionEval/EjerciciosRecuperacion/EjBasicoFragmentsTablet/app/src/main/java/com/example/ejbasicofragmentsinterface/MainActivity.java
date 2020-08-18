@@ -8,6 +8,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -20,9 +21,9 @@ public class MainActivity extends AppCompatActivity  {
      */
     private Button boton1;
     private Button boton2;
-    private Fragment fragmentBotones;
-    private Fragment fragmentDetalles;
     private FragmentsSharedViewModel vm;
+    private FragmentBotones fragmentBotones;
+    private FragmentDetalles fragmentDetalles;
 
 
     @Override
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity  {
         vm = new ViewModelProvider(this).get(FragmentsSharedViewModel.class);
 
         vm.setTablet(getResources().getBoolean(R.bool.isTablet));
+
         //También se puede hacer directamente con findViewBy de alguno de los Framelayout
 
         //Si es tablet carga los dos fragments (Botones y Detalles)

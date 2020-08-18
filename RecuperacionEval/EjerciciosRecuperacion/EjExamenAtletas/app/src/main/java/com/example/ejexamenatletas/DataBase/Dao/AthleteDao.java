@@ -8,6 +8,7 @@ import androidx.room.Query;
 import com.example.ejexamenatletas.Entities.Athlete;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Dao
 public interface AthleteDao {
@@ -16,7 +17,7 @@ public interface AthleteDao {
     void insertAthlete(Athlete athlete);
 
     @Query("SELECT * FROM Athlete")
-    LiveData<ArrayList<Athlete>> getAllAthletes();
+    LiveData<List<Athlete>> getAllAthletes();
 
 
 }

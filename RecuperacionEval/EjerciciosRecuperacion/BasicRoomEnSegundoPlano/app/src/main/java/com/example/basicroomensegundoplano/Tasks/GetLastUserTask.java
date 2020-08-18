@@ -5,6 +5,10 @@ import android.os.AsyncTask;
 import com.example.basicroomensegundoplano.Dao.UserDao;
 import com.example.basicroomensegundoplano.Entities.User;
 
+/**
+ * Esta clase no se llega a usar, porque Room me devuelve un LiveData en segundo plano sirectamente
+ * por lo que no hace falta implementarlo a mano la operación en segundo plano *
+ */
 public class GetLastUserTask extends AsyncTask<Void, Void, User> {
 
     //Private attributes

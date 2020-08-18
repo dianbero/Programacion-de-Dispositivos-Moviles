@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.DetailsFragment"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:id="@+id/details">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -17,17 +18,18 @@
         android:text="Name:"
         android:textSize="20dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="-75dp"/>
+        android:layout_marginTop="-45dp"/>
 
     <TextView
         android:id="@+id/name"
         android:text="sdf"
-        android:textSize="20dp"
+        android:textSize="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="20dp"
+        android:textStyle="bold"
         />
     <TextView
         android:text="Surname:"
@@ -44,7 +46,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="sdfsd"
-        android:textSize="20dp"
+        android:textSize="30dp"
+
+        android:textStyle="bold"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="20dp"
@@ -66,7 +70,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="sdfsd"
-        android:textSize="20dp"
+        android:textSize="30dp"
+
+        android:textStyle="bold"
         android:width="100dp"
         android:height="200dp"
         android:layout_marginLeft="40dp"

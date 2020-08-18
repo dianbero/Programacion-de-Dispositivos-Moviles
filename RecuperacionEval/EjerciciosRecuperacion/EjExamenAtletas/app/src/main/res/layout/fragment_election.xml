@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.ElectionFragment"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:id="@+id/election">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
