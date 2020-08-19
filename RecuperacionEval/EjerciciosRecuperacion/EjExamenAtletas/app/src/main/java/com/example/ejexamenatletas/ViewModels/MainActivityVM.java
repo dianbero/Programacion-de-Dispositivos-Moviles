@@ -40,6 +40,7 @@ public class MainActivityVM extends AndroidViewModel {
     //Getters and Setters
 
     public LiveData<List<Athlete>> getAthleteList() {
+//        this.athleteList = repository.getAllAthletes();
         return athleteList;
     }
 
