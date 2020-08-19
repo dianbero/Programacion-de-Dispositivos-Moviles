@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     private InsertionFragment insertionFragment;
     private ListAthletesFragment listAthletesFragment;
     private ApiDbRepository repository;
-    private FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
         //Inicializo la factory
         factory = new MainActivityVMFactory(getApplication());
         //Inicializo el VM con el factory
-        vm = new ViewModelProvider(this, factory).get(MainActivityVM.class);
+        vm = new ViewModelProvider(this).get(MainActivityVM.class);
 
         // Indico si es tablet o no
-        vm.setTablet(isTablet()); //TODO arreglar, no funciona
+        vm.setTablet(isTablet()); //Esto se podría hacer directamente en el VM, creo
 
         // Instancio el repository
         repository = new ApiDbRepository(getApplication());
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 // Comprobamos si es tablet o no y hacemos el resto de las operaciones
                 if (isTablet) {
                     //Implementar para tablet
-                    //TODO poner los tres fragments del tirón
+
                     //Fragment Inserción
                     insertionFragment = new InsertionFragment(repository);
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentTabletInsert, insertionFragment).commit();
@@ -63,59 +62,31 @@ public class MainActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentTabletList, listAthletesFragment).commit();
                     //Fragment Detalles
                     openDetailsFragmentPhone(R.id.fragmentTabletDetails);
-//                    detailsFragment = new DetailsFragment();
-//                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentTabletDetails, detailsFragment).commit();
 
                 } else {
                     //Implementar para móvil
+
                     //Inicializo election Fragment primero pasándole el factory necesario para le VM, para que elija el botón
                     electionFragment = new ElectionFragment(factory);
-                    getSupportFragmentManager().beginTransaction().replace(R.id.contenedorCompartido, electionFragment).commit();
+                    getSupportFragmentManager().beginTransaction().add(R.id.contenedorCompartido, electionFragment).commit();
                     //Dentro del fragment habrá elegido uno y ahora observo el vm, para ver cual ha elegido y abri el fragment elegido
+
 
                     //Observo el string del botón que ha sido seleccionado y abro el fragment correspondiente
                     abrirFragmentsMovil();
+                    //Observo el elemento seleccionado y abro sus detalles
                     openDetailsFragmentPhone(R.id.contenedorCompartido);
-
-
-//                    Observo el botón que ha sido ha sido seleccionado
-
-//                    vm.getSelectedBotomName().observe(MainActivity.this, new Observer<String>() {//No sé por qué no me deja hacerlo directamente aquí,
-////                                                                                        no me permite pasar la actividad como parámetro con 'this',
-////                                                                                      // funciona haciéndolo en un método a parte, lo cual se me hace raro,
-////                                                                                      ya que no veo por qué así sí funciona,
-                                                                                        //Si deja, pero hay que pasarle MainActivity.this, en lugar de sólo this directamente
-//
-//                        //Acabo de ver que también puedo hacer con MainActivity.this
-//                        @Override
-//                        public void onChanged(String s) {
-//                            switch (s){
-//                                case "insert":
-//                                    //Abre fragment inserción
-//                                    insertionFragment = new InsertionFragment();
-//                                    getSupportFragmentManager().beginTransaction().replace(R.id.contenedorCompartido, insertionFragment).addToBackStack(null).commit();
-//                                    break;
-//                                case  "list":
-//                                    //Abre fragment listado de atletas
-//                                    listAthletesFragment = new ListAthletesFragment();
-//                                    getSupportFragmentManager().beginTransaction().replace(R.id.contenedorCompartido, listAthletesFragment).addToBackStack(null).commit();
-//                                    break;
-//                            }
-//                        }
-//                    });
-
-
                 }
-
 
             }
         });
 
-
     }
 
+    /**
+     * Método que abre el correspondiente fragment observando el texto del botón seleccionado
+     */
     private void abrirFragmentsMovil() {
-
 
         vm.getSelectedBotomName().observe(this, new Observer<String>() {
             @Override
@@ -131,28 +102,23 @@ public class MainActivity extends AppCompatActivity {
                         listAthletesFragment = new ListAthletesFragment();
                         getSupportFragmentManager().beginTransaction().replace(R.id.contenedorCompartido, listAthletesFragment).addToBackStack(null).commit();
 
-//                        openDetailsFragmentPhone(R.id.contenedorCompartido);
+//                        openDetailsFragmentPhone(R.id.contenedorCompartido); //Esto va mal: hace que al intentar ir al segundo fragment,
+                                                                                //tras haber estado en todos, se vaya directamente al tercero
+                                                                                //Puede que se trastoque al observar dentro de otro observable
 
-
-//                        vm.getElementPosition().observe(MainActivity.this, new Observer<Integer>() {
-//                            @Override
-//                            public void onChanged(Integer integer) {
-//
-//                                detailsFragment = new DetailsFragment(integer);
-//                                getSupportFragmentManager().beginTransaction().replace(R.id.contenedorCompartido, detailsFragment).addToBackStack(null).commit();
-//
-//                            }
-//                        });
                         break;
 
                 }
-
-
             }
         });
     }
 
 
+    /**
+     * Método que abre el fragmento de detalles observando el entero de la posición del elemento seleccionado
+     * de la lista.
+     * @param idContainer id del contentedor UI en el que se va a mostrar dependiento de si es un móvil o tablet
+     */
     private void openDetailsFragmentPhone(final int idContainer) {
             vm.getElementPosition().observe(this, new Observer<Integer>() {
                 @Override
@@ -162,7 +128,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
-
     }
 
     /**

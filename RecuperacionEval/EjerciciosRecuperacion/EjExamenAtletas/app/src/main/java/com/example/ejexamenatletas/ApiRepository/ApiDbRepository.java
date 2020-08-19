@@ -17,7 +17,7 @@ public class ApiDbRepository {
 
     private AthleteDao athleteDao;
     private Application application;
-//    private LiveData<ArrayList<Athlete>> allAthletes;
+    private LiveData<List<Athlete>> allAthletes;
 
     //Constructor
 
@@ -25,7 +25,7 @@ public class ApiDbRepository {
         AppDataBase db = AppDataBase.getInstanceDb(application);
         this.athleteDao = db.athleteDao();
         this.application = application;
-//        this.allAthletes = athleteDao.getAllAthletes(); //Voy a probar a hacerlo así para que no
+//        this.allAthletes = athleteDao.getAllAthletes(); //Voy a probar a no hacerlo así para que no
                                                             // haga el esfuerzo en cargar todos los atletas nada más instanciar la clase, sino que
                                                             // lo tenga que hacer cuando lo necesite y llame expresamente al método
     }
@@ -38,5 +38,6 @@ public class ApiDbRepository {
 
     public LiveData<List<Athlete>> getAllAthletes() {
         return athleteDao.getAllAthletes();
+//        return allAthletes;
     }
 }

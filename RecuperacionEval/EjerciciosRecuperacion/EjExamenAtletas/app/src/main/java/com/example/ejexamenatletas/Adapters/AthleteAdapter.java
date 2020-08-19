@@ -52,6 +52,9 @@ public class AthleteAdapter extends RecyclerView.Adapter<AthleteViewHolder> {
         //Como lo que muestra es el nombre del atleta, le paso el string del nombre del elemento que corresponde
         holder.getTvName().setText(athletesList.get(position).getName());
 
+        //NOTA: implementar aquí directamente el método onClick no es lo más correcto.
+        // En este caso sólo le paso el listener al ViewHolder y en la clase ViewHolder le asigno a lo elementos de la vista
+        // mi propio onClick de la interfaz que he creado: IRecyclerViewListener. Ver ViewHolder
 
     }
 

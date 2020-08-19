@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">EjExamenAtletas</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">EjExamAthlets</string>
+<!--    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;-->
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+
+    <string name="list">list</string>
+    <string name="insert">insert</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="observations">Observations</string>
+    <string name="acept">Acept</string>
+    <string name="textValidation">You must write name and surname</string>
+    <string name="textInsertion">Athlete inserted</string>
 </resources>

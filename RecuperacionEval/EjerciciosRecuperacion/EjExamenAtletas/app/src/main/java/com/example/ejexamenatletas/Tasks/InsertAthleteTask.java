@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.example.ejexamenatletas.DataBase.Dao.AthleteDao;
 import com.example.ejexamenatletas.Entities.Athlete;
+import com.example.ejexamenatletas.R;
 
 public class InsertAthleteTask extends AsyncTask<Athlete, Void,Void> {
 
@@ -27,6 +28,7 @@ public class InsertAthleteTask extends AsyncTask<Athlete, Void,Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-        Toast.makeText(application, "Athlete inserted", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(application, "Athlete inserted", Toast.LENGTH_SHORT).show();
+        Toast.makeText(application, application.getResources().getString(R.string.textInsertion), Toast.LENGTH_SHORT).show();
     }
 }

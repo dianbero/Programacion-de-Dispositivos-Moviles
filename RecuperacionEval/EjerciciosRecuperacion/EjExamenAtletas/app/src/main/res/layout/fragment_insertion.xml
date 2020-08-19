@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:text="Name:"
+        android:text="@string/name"
         android:textSize="20dp"
         android:layout_marginBottom="20dp"/>
 
@@ -28,7 +28,7 @@
         android:layout_marginBottom="10dp"
         />
     <TextView
-        android:text="Surname:"
+        android:text="@string/surname"
         android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Observations:"
+        android:text="@string/observations"
         android:textSize="20dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -74,7 +74,7 @@
         android:id="@+id/btnInsert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Aceptar"
+        android:text="@string/acept"
         android:textSize="30dp"
         android:height="100dp"
         android:layout_marginLeft="40dp"

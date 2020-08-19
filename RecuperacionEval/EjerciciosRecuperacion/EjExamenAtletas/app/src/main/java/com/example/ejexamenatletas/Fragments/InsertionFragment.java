@@ -65,12 +65,18 @@ public class InsertionFragment extends Fragment implements View.OnClickListener 
         }
     }
 
-
+    /**
+     * Método que inserta datos en base de datos a través del repository
+     */
     private void insertData() {
         //Inserto los datos
         repository.insertAthlete(athlete);
     }
 
+    /**
+     * Método que valida los datos introducidos y los asigna a un objeto atleta
+     * @return boolean correct, que indica si los datos son correctos o no
+     */
     private boolean checkData() {
         boolean correct = false;
         //Extraigo los datos de la vista
@@ -80,7 +86,8 @@ public class InsertionFragment extends Fragment implements View.OnClickListener 
 
         //Si el hueco del nombre y apellidos están vacíos muestra mensaje incándolo
         if (name.trim().isEmpty() || surname.trim().isEmpty()) {
-            Toast.makeText(requireActivity(), "Debes escribir nombre y apellidos", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(requireActivity(), "Debes escribir nombre y apellidos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireActivity(), getResources().getString(R.string.textValidation), Toast.LENGTH_SHORT).show();
         } else {
             //Indico que los datos son correctos
             correct = true;

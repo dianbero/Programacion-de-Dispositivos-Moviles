@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EjExamenAtletas</string>
+
+    <string name="list">Lista</string>
+    <string name="insert">Insertar</string>
+    <string name="name">Nombre</string>
+    <string name="surname">Apellido</string>
+    <string name="observations">Observaciones</string>
+    <string name="acept">Aceptar</string>
+    <string name="textValidation">Debes escribir nombre y apellidos</string>
+    <string name="textInsertion">Atleta insertado</string>
+</resources>

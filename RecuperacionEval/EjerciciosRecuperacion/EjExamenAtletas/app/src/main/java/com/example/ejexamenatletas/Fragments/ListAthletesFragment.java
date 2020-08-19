@@ -54,7 +54,7 @@ public class ListAthletesFragment extends Fragment  /*View.OnClickListener*/  /*
         recyclerView.setLayoutManager(layoutManager);
 
         //Listener para cuando se clica el botón
-        final IRecyclerViewListener listener = new IRecyclerViewListener() {
+         final IRecyclerViewListener listener = new IRecyclerViewListener() {
             @Override
             public void onClick(View v, int position) {
                 vm.setElementPosition(position);
@@ -77,11 +77,4 @@ public class ListAthletesFragment extends Fragment  /*View.OnClickListener*/  /*
         return view;
     }
 
-    //Método de la interfaz que he creado para el listener de los elementos de la lista
-//    @Override
-//    public void onClick(View v, int position) {
-//        Toast.makeText(getActivity(), listaPrueba.get(position).getName(), Toast.LENGTH_SHORT).show();
-//    }
-
-//
 }

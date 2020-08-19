@@ -16,17 +16,11 @@ public class AthleteViewHolder extends RecyclerView.ViewHolder implements  View.
     private IRecyclerViewListener listener;
 
     //Constructor
-//    public AthleteViewHolder(@NonNull TextView tvName) {
-//        super(tvName);
-//        this.tvName = tvName;
-//        this.listener = listener;
-//        tvName.setOnClickListener(this);
-//    }
-
-
     public AthleteViewHolder(@NonNull View itemView, IRecyclerViewListener listener) {
         super(itemView);
+        //Intancio los elementos de la vista
         this.tvName = (TextView) itemView.findViewById(R.id.athleteName);
+        //Le asigno el listener y el contexto, para que responda al evento de click
         this.listener = listener;
         tvName.setOnClickListener(this);
     }
@@ -40,6 +34,11 @@ public class AthleteViewHolder extends RecyclerView.ViewHolder implements  View.
         this.tvName = tvName;
     }
 
+    /**
+     * Método que realiza una acción en respuesta al evento de click
+     * En este caso al clickar un elemento de la lista
+     * @param v el elemento clickado
+     */
     @Override
     public void onClick(View v) {
         listener.onClick(v, getAdapterPosition());
