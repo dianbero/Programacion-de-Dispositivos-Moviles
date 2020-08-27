@@ -22,7 +22,6 @@ public class MainActivityVM extends AndroidViewModel {
 
     //Datos para el manejo de fragments
     private MutableLiveData<String> selectedBotomName;
-
     private ApiDbRepository repository;
 
     //Constructors

@@ -74,15 +74,15 @@ public class MainActivity extends AppCompatActivity  {
             final Observer<String> observer = new Observer<String>() {
                 @Override
                 public void onChanged(String s) {
-                    fragmentDetalles = new FragmentDetalles();
+//                    fragmentDetalles = new FragmentDetalles();
 //                    FragmentManager frgManager2 = getSupportFragmentManager();
 //                    FragmentTransaction frgTransaction2 = frgManager2.beginTransaction();
 //                    frgTransaction2.replace(R.id.fragmentCompartido, fragmentDetalles);
 //                    //Para que vuelva al fragment de botones
 //                    frgTransaction2.addToBackStack(null);
 //                    frgTransaction2.commit();
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentCompartido, fragmentDetalles).addToBackStack(null).commit();
+//                    FragmentDetalles.newInstance(s);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentCompartido, FragmentDetalles.newInstance(s)).addToBackStack(null).commit();
                 }
             };
 

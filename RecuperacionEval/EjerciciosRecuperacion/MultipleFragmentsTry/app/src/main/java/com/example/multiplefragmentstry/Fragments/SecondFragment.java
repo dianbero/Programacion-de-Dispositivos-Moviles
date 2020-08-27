@@ -2,7 +2,9 @@ package com.example.multiplefragmentstry.Fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
@@ -36,6 +38,20 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
         return view;
     }
 
+//    @Override
+//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+//        super.onActivityCreated(savedInstanceState);
+//
+//        vm = new ViewModelProvider(requireActivity()).get(MainActivityVM.class);
+//
+//        vm.getBtnID().observe(getActivity(), new Observer<Integer>() {
+//            @Override
+//            public void onChanged(Integer integer) {
+//
+//            }
+//        });
+//    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -48,7 +64,5 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
                 break;
 
         }
-//        vm.setBtnID(R.id.btnFragment2);
-
     }
 }

@@ -37,18 +37,28 @@ public class FragmentDetalles extends Fragment {
         textView = view.findViewById(R.id.textoBoton);
 
         //Inicializo el ViewModel
-        vm = new ViewModelProvider(requireActivity()).get(FragmentsSharedViewModel.class);
+//        vm = new ViewModelProvider(requireActivity()).get(FragmentsSharedViewModel.class);
 
-        final Observer<String> observer = new Observer<String>() {
-            @Override
-            public void onChanged(String s) {
-                //Actualizo la vista
-                textView.setText(s);
-            }
-        };
+//        final Observer<String> observer = new Observer<String>() {
+//            @Override
+//            public void onChanged(String s) {
+//                //Actualizo la vista
+//                textView.setText(s);
+//            }
+//        };
+//
+//        vm.getTextoAMostrar().observe(requireActivity(), observer);
 
-        vm.getTextoAMostrar().observe(requireActivity(), observer);
-
+        textView.setText(getArguments().getString("texto"));
         return view;
+    }
+
+    public static FragmentDetalles newInstance(String texto) {
+        FragmentDetalles fragment = new FragmentDetalles();
+        Bundle args = new Bundle();
+//        args.putString(ARG_PARAM1, param1);
+        args.putString("texto", texto);
+        fragment.setArguments(args);
+        return fragment;
     }
 }

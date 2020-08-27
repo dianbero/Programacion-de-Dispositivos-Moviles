@@ -30,9 +30,9 @@ public class FirstFragment extends Fragment implements View.OnClickListener{
 //    private String mParam1;
 //    private String mParam2;
 //
-//    public FirstFragment() {
-//        // Required empty public constructor
-//    }
+    public FirstFragment() {
+        // Required empty public constructor
+    }
 //
 //    /**
 //     * Use this factory method to create a new instance of
