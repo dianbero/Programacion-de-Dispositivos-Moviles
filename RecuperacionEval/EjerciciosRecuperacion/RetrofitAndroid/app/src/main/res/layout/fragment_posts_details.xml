@@ -24,7 +24,7 @@
         android:layout_marginTop="50dp"/>
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/title"
         android:text="sdf"
         android:textSize="30dp"
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
         />
 
     <TextView
-        android:id="@+id/surname"
+        android:id="@+id/body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="sdfsd"

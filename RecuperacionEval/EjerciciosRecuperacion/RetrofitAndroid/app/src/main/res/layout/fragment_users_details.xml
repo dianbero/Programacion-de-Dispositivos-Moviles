@@ -39,7 +39,7 @@
         />
 
     <TextView
-        android:id="@+id/surname"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="sdfsd"
@@ -63,7 +63,7 @@
         />
 
     <TextView
-        android:id="@+id/observations"
+        android:id="@+id/company"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="sdfsd"

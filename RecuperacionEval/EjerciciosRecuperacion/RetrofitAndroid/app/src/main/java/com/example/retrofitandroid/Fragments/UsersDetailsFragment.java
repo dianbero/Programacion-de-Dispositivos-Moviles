@@ -3,12 +3,15 @@ package com.example.retrofitandroid.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.retrofitandroid.R;
+import com.example.retrofitandroid.ViewModels.MainActivityVM;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +60,22 @@ public class UsersDetailsFragment extends Fragment {
         }
     }
 
+    private TextView name;
+    private TextView email;
+    private TextView company;
+    private MainActivityVM vm;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_users_details, container, false);
+        View view = inflater.inflate(R.layout.fragment_users_details, container, false);
+        vm = new ViewModelProvider(requireActivity()).get(MainActivityVM.class);
+
+        name = view.findViewById(R.id.name);
+        email = view.findViewById(R.id.email);
+        company = view.findViewById(R.id.company);
+
+        return view;
     }
 }

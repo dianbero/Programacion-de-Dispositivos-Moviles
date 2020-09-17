@@ -63,7 +63,7 @@ public class ListAthletesFragment extends Fragment  /*View.OnClickListener*/  /*
         };
 
 
-        //Observo el listado de atletas, para pasarlos al adapter y mostrarlo en la vista
+        //Observo el listado de atletas, para pasarlos al adapadapter y mostrarlo en la vista
         vm.getAthleteList().observe(requireActivity(), new Observer<List<Athlete>>() {
             @Override
             public void onChanged(List<Athlete> athletes) {

@@ -3,12 +3,17 @@ package com.example.retrofitandroid.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.retrofitandroid.Entities.Post;
 import com.example.retrofitandroid.R;
+import com.example.retrofitandroid.ViewModels.MainActivityVM;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +62,36 @@ public class PostsDetailsFragment extends Fragment {
         }
     }
 
+    //Private Atributtes
+    private TextView title;
+    private TextView body;
+    private MainActivityVM vm;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_posts_details, container, false);
+        View view = inflater.inflate(R.layout.fragment_posts_details, container, false);
+
+        vm = new ViewModelProvider(requireActivity()).get(MainActivityVM.class);
+
+        title = view.findViewById(R.id.title);
+        body = view.findViewById(R.id.body);
+
+        Post post = vm.getPostDetails();
+
+        title.setText(post.getTitle());
+        body.setText(post.getBody());
+
+
+//        vm.getPostDetails().observe(getActivity(), new Observer<Post>() {
+//            @Override
+//            public void onChanged(Post post) {
+//                title.setText(post.getTitle());
+//                body.setText(post.getBody());
+//            }
+//        });
+
+        return view;
     }
 }

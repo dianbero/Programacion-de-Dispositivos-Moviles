@@ -1,8 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    //No sé por qué pero me dio problemas, y añadiéndole eso ya compilaba
+    //Vale, creo que lo necesita porque uso OkHttp3
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     compileSdkVersion 29
     buildToolsVersion "30.0.0"
+
 
     defaultConfig {
         applicationId "com.example.retrofitandroid"
@@ -32,6 +40,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     def lifecycle_version = "2.2.0"
+//    def retrofit_version = "2.9.0" //Última versión, da fallos no sé por qué
+    def retrofit_version = "2.1.0"
+
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
     // LiveData
@@ -41,9 +52,20 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
     //Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    //GSON Converter
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+//    //Retrofit
+//    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+//
+//    //GSON Converter
+//    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
 
     //Okhttp3
-    implementation("com.squareup.okhttp3:okhttp:4.8.1")
+//    implementation("com.squareup.okhttp3:okhttp:4.8.1")
+//    implementation("com.squareup.okhttp3:okhttp:3.12.8")
+
+
 
 }
